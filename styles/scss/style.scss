@@ -1,0 +1,53 @@
+// connecting general scss files
+@import "./base/_normolize.scss";
+@import "./base/_fonts.scss";
+@import "./base/_mixins.scss";
+@import "./base/_media.scss";
+@import "./base/_variables.scss";
+@import "./base/_utils.scss";
+@import "./base/_globals.scss";
+//blocks
+@import "./blocks/_logo.scss";
+@import "./blocks/_button.scss";
+@import "./blocks/_grid.scss";
+@import "./blocks/_header.scss";
+@import "./blocks/_cross-button.scss";
+@import "./blocks/_section.scss";
+@import "./blocks/_soc1als.scss";
+@import "./blocks/_footer.scss";
+//==========
+// Временно
+body {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+}
+.content {
+  position: relative;
+  flex-grow: 1;
+  border-right: 1px solid violet;
+  border-left: 1px solid violet;
+
+  &::after {
+    @include abs-center;
+
+    content: "CONTENT";
+    font-size: 50px;
+    font-weight: 700;
+    color: violet;
+  }
+}
+.footer {
+  position: relative;
+  outline: 4px solid red;
+  min-height: 100px;
+
+  &::after {
+    @include abs-center;
+
+    content: "FOOTER";
+    font-size: 50px;
+    font-weight: 700;
+    color: red;
+  }
+}
