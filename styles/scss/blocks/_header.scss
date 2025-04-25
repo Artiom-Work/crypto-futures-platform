@@ -1,13 +1,12 @@
 .header {
-  --headerIndentation: clamp(20px, 2.26vw, 50px);
+  --headerIndentation: clamp(20px, 2.56vw, 50px);
   @include flex-space-between;
 
   position: relative;
-  padding-inline: clamp(20px, 2.26vw, 50px);
+  padding-inline: clamp(20px, 2.56vw, 60px) var(--headerIndentation);
 
   padding-block: var(--headerIndentation) 0;
-  &__logo {
-  }
+
   &__text {
     @include fluid-text(54, 22);
 
@@ -22,8 +21,5 @@
     position: absolute;
     right: 1.57vw;
     top: -0.57vw;
-
-    width: clamp(44px, 4.58vw, 88px);
-    height: clamp(55px, 5.7vw, 111px);
   }
 }

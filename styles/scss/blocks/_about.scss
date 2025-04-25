@@ -1,0 +1,32 @@
+.about {
+  padding-block: 28px 70px;
+  padding-inline: clamp(20px, 2.56vw, 60px);
+
+  @include tablet-media {
+    padding-block: 20px 30px;
+  }
+  &__heading {
+    margin-block: 0 34px;
+  }
+
+  &__title {
+    white-space: nowrap;
+    text-transform: uppercase;
+    &-icon {
+      width: clamp(17px, 1.19vw, 23px);
+      height: clamp(21px, 1.45vw, 28px);
+    }
+  }
+
+  &__text {
+    max-width: clamp(500px, 57.29vw, 1100px);
+    @include fluid-text(32, 18);
+
+    letter-spacing: -0.08em;
+    line-height: 1;
+
+    &--accent {
+      font-weight: 700;
+    }
+  }
+}

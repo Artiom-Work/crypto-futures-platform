@@ -8,9 +8,10 @@
 @import "./base/_globals.scss";
 //blocks
 @import "./blocks/_logo.scss";
+@import "./blocks/_header.scss";
+@import "./blocks/_about.scss";
 @import "./blocks/_button.scss";
 @import "./blocks/_grid.scss";
-@import "./blocks/_header.scss";
 @import "./blocks/_cross-button.scss";
 @import "./blocks/_section.scss";
 @import "./blocks/_soc1als.scss";
@@ -23,18 +24,18 @@ body {
   flex-direction: column;
 }
 .content {
-  position: relative;
+  // position: relative;
   flex-grow: 1;
-  border-right: 1px solid violet;
-  border-left: 1px solid violet;
+  // border-right: 1px solid violet;
+  // border-left: 1px solid violet;
 
   &::after {
-    @include abs-center;
+    // @include abs-center;
 
-    content: "CONTENT";
-    font-size: 50px;
-    font-weight: 700;
-    color: violet;
+    // content: "CONTENT";
+    // font-size: 50px;
+    // font-weight: 700;
+    // color: violet;
   }
 }
 .footer {

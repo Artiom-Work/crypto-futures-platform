@@ -1,9 +1,9 @@
 .logo {
   max-width: 932px;
-  max-width: clamp(290px, 48.5vw, 932px);
+  max-width: clamp(320px, 48.5vw, 932px);
   width: 100%;
   background: var(--color-grad-1);
-  padding: clamp(15px, 2.2vw, 43px) clamp(10px, 2.6vw, 50px);
+  padding: clamp(15px, 2.2vw, 42px) clamp(10px, 2.6vw, 50px);
   border-radius: 92px;
   white-space: nowrap;
 
@@ -26,13 +26,12 @@
     transition-duration: var(--transition-duration);
   }
   &__text {
-    @include fluid-text(37, 15);
+    @include fluid-text(44, 16);
 
-    font-family: var(--font-family-base-accent-light);
-    line-height: 1.4;
-    font-weight: 700;
+    line-height: 1.1;
+    letter-spacing: -0.02em;
   }
   &__text--accent {
-    font-weight: 500;
+    font-weight: 700;
   }
 }
