@@ -1,5 +1,5 @@
 .about {
-  padding-block: 28px 70px;
+  padding-block: 28px 71px;
   padding-inline: clamp(20px, 2.56vw, 60px);
 
   @include tablet-media {
@@ -19,14 +19,18 @@
   }
 
   &__text {
-    max-width: clamp(500px, 57.29vw, 1100px);
-    @include fluid-text(32, 18);
+    @include fluid-text(31, 18);
 
+    max-width: clamp(500px, 57.29vw, 1120px);
+
+    font-family: var(--font-family-base-accent-light);
     letter-spacing: -0.08em;
-    line-height: 1;
+    line-height: 0.95;
 
-    &--accent {
-      font-weight: 700;
+    @include mobile-media {
+      p:not(:last-child) {
+        --paragraphMarginBottom: 14px;
+      }
     }
   }
 }

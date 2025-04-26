@@ -54,15 +54,31 @@ a {
     font-weight: 700;
   }
 }
+.accent-text {
+  font-family: var(--font-family-base);
+  font-weight: 700;
+  letter-spacing: -0.06em;
+}
+.page-heading {
+  @include fluid-text(115, 22);
+
+  font-family: var(--font-family-base-accent-light);
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 1.53;
+  white-space: nowrap;
+
+  &--accent {
+    letter-spacing: -0.04em;
+  }
+}
+
 .decor-image {
   width: clamp(44px, 4.58vw, 88px);
   height: clamp(55px, 5.7vw, 111px);
 }
 
 .round-icon {
-  fill: white;
-  stroke: white;
-
   &-wrapper {
     @include square(clamp(44px, 2.8vw, 54px));
     @include flex-center(true);

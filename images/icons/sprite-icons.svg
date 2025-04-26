@@ -52,14 +52,15 @@
 	</symbol>
 
 
-	<symbol id="privilege-present" viewBox="0 0 48 48" fill="none">
-		<path d="M17.8594 6.45L21.1219 12H21H14.25C12.1781 12 10.5 10.3219 10.5 8.25C10.5 6.17812 12.1781 4.5 14.25 4.5H14.4562C15.8531 4.5 17.1562 5.24063 17.8594 6.45ZM6 8.25C6 9.6 6.32812 10.875 6.9 12H3C1.34062 12 0 13.3406 0 15V21C0 22.6594 1.34062 24 3 24H45C46.6594 24 48 22.6594 48 21V15C48 13.3406 46.6594 12 45 12H41.1C41.6719 10.875 42 9.6 42 8.25C42 3.69375 38.3063 0 33.75 0H33.5437C30.5531 0 27.7781 1.58438 26.2594 4.1625L24 8.01562L21.7406 4.17188C20.2219 1.58437 17.4469 0 14.4562 0H14.25C9.69375 0 6 3.69375 6 8.25ZM37.5 8.25C37.5 10.3219 35.8219 12 33.75 12H27H26.8781L30.1406 6.45C30.8531 5.24063 32.1469 4.5 33.5437 4.5H33.75C35.8219 4.5 37.5 6.17812 37.5 8.25ZM3 27V43.5C3 45.9844 5.01562 48 7.5 48H21V27H3ZM27 48H40.5C42.9844 48 45 45.9844 45 43.5V27H27V48Z" fill="url(#paint0_linear_3_350)"/>
-		<defs>
-			<linearGradient id="paint0_linear_3_350" x1="21.3147" y1="48" x2="51.52" y2="32.3379" gradientUnits="userSpaceOnUse">
-				<stop stop-color="#FBC81F"/>
-				<stop offset="0.885" stop-color="#FFAF2E"/>
-			</linearGradient>
-		</defs>
+	<symbol id="square" fill="none">
+		<circle cx="3" cy="3" r="2" stroke="black" stroke-width="2"/>
+		<circle cx="23" cy="3" r="2" stroke="black" stroke-width="2"/>
+		<circle cx="3" cy="23" r="2" stroke="black" stroke-width="2"/>
+		<circle cx="23" cy="23" r="2" stroke="black" stroke-width="2"/>
+		<line x1="5" y1="3" x2="21" y2="3" stroke="black" stroke-width="2"/>
+		<line x1="5" y1="23" x2="21" y2="23" stroke="black" stroke-width="2"/>
+		<line x1="3" y1="21" x2="3" y2="5" stroke="black" stroke-width="2"/>
+		<line x1="23" y1="21" x2="23" y2="5" stroke="black" stroke-width="2"/>
 	</symbol>
 		
 
@@ -68,3 +69,6 @@
 	</symbol>
 </svg> 
 
+<svg width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+
+</svg>
