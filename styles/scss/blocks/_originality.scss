@@ -1,0 +1,16 @@
+.originality {
+  &__inner {
+    padding-block: clamp(25px, 3.8vw, 75px) clamp(25px, 3.8vw, 82px);
+  }
+  &__table {
+    max-width: 1455px;
+    width: 100%;
+    margin-inline: auto;
+  }
+}
+.originality__title {
+}
+
+.originality__section-decor-background {
+  height: clamp(25px, 2.81vw, 54px);
+}

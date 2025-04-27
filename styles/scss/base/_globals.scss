@@ -1,4 +1,7 @@
 body {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
   // @include fluid-text(30, 16);
 
   font-family: var(--font-family-base);
@@ -7,7 +10,9 @@ body {
   color: var(--color-dark);
   background-color: var(--color-light);
 }
-
+.content {
+  flex-grow: 1;
+}
 a,
 button,
 input,
@@ -43,22 +48,13 @@ a {
 // .h4 {
 //   @include fluid-text(20, 18);
 // }
-.section-heading {
-  display: flex;
-  align-items: center;
-  &__image {
-    margin-right: 22px;
-  }
-  &__title {
-    @include fluid-text(27, 20);
-    font-weight: 700;
-  }
-}
+
 .accent-text {
   font-family: var(--font-family-base);
   font-weight: 700;
   letter-spacing: -0.06em;
 }
+
 .page-heading {
   @include fluid-text(115, 22);
 

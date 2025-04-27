@@ -47,17 +47,17 @@
 	<main class="content">
 		<h1 class="visually-hidden">Mini-app Q</h1>
 
-		<section class="about container">
+		<section class="about container section">
 			<h2 class="visually-hidden">О платформе Mini-app Q</h2>
 
-			<div class="about__heading section-heading">
-				<div class="round-icon-wrapper section-heading__image">
+			<div class="about__heading section__heading">
+				<div class="round-icon-wrapper section__heading-image">
 					<svg class="about__title-icon round-icon" width="23" height="28" viewBox="0 0 23 28">
 						<use xlink:href="./images/icons/sprite-icons.svg#document"></use>
 					</svg>
 				</div>
 
-				<h3 class="about__title section-heading__title">
+				<h3 class="about__title section__heading-title">
 					О платформе
 				</h3>
 			</div>
@@ -81,155 +81,203 @@
 			</div>
 		</section>
 
-		<section class="global-statistic container">
-			<svg class="global-statistic__decor-image global-statistic__decor-image--top decor-image hidden-mobile" width="88"
-				height="111" viewBox="0 0 88 111">
-				<use xlink:href="./images/icons/sprite-icons.svg#decor-circles"></use>
-			</svg>
+		<section class="global-statistic section">
 
+			<div class="global-statistic__wrapper container">
+				<svg class="global-statistic__decor-image global-statistic__decor-image--top decor-image hidden-mobile"
+					width="88" height="111" viewBox="0 0 88 111">
+					<use xlink:href="./images/icons/sprite-icons.svg#decor-circles"></use>
+				</svg>
 
-			<aside class="who-uses">
-				<h2 class="visually-hidden">Кто пользуется Mini-app Q</h2>
+				<aside class="who-uses section">
+					<h2 class="visually-hidden">Кто пользуется Mini-app Q</h2>
 
-				<div class="who-uses__heading section-heading">
-					<div class="round-icon-wrapper section-heading__image">
-						<svg class="who-uses__title-icon round-icon" width="26" height="26" viewBox="0 0 26 26">
-							<use xlink:href="./images/icons/sprite-icons.svg#target"></use>
+					<div class="who-uses__heading section__heading">
+						<div class="round-icon-wrapper section__heading-image">
+							<svg class="who-uses__title-icon round-icon" width="26" height="26" viewBox="0 0 26 26">
+								<use xlink:href="./images/icons/sprite-icons.svg#target"></use>
+							</svg>
+						</div>
+
+						<h3 class="who-uses__title section__heading-title">
+							Целевая аудитория
+						</h3>
+					</div>
+
+					<div class="who-uses__body">
+						<div class="who-uses__graph" style="--value-1: 42; --value-2: 23; --value-3: 23; --value-4: 12">
+							<div class="who-uses__graph-image" aria-hidden="true">
+								<span class="visually-hidden">Круговая диаграмма распределения аудитории</span>
+								<span class="who-uses__graph-image-value" data-value="42"></span>
+								<span class="who-uses__graph-image-value" data-value="23"></span>
+								<span class="who-uses__graph-image-value" data-value="23"></span>
+								<span class="who-uses__graph-image-value" data-value="12"></span>
+							</div>
+
+							<dl class="metrics-list">
+								<div class="metrics-list__item">
+									<dt class="metrics-list__value" data-value="42"></dt>
+									<dd class="metrics-list__name">Криптоинвесторы</dd>
+								</div>
+
+								<div class="metrics-list__item">
+									<dt class="metrics-list__value" data-value="23"></dt>
+									<dd class="metrics-list__name">Новички</dd>
+								</div>
+
+								<div class="metrics-list__item">
+									<dt class="metrics-list__value" data-value="23"></dt>
+									<dd class="metrics-list__name">Опытные пользователи</dd>
+								</div>
+
+								<div class="metrics-list__item">
+									<dt class="metrics-list__value" data-value="12"></dt>
+									<dd class="metrics-list__name">Стратегические партнеры</dd>
+								</div>
+							</dl>
+						</div>
+
+						<div class="who-uses__referral-system referral-system">
+							<div class="referral-system__text">
+								<p>
+									Реферальная <span class="accent-text">система</span> наград:
+								</p>
+							</div>
+
+							<h3 class="referral-system__subtitle">Релиз 1</h3>
+							<ul class="referral-system__list">
+								<li class="referral-system__item referral-system__text">
+
+									<span class="referral-system__item-value accent-text">0.77%</span> стейкинг с распределением от всех
+
+								</li>
+							</ul>
+
+							<h3 class="referral-system__subtitle">Релиз 2</h3>
+							<ul class="referral-system__list">
+								<li class="referral-system__item referral-system__text">
+
+									<span class="referral-system__item-value accent-text">0.55%</span> друга и от друга
+
+								</li>
+								<li class="referral-system__item referral-system__text">
+
+									<span class="referral-system__item-value accent-text">0.25%</span> между друзьями
+									<span class="referral-system__item-value accent-text">+ 1.75%</span> за друзей
+
+								</li>
+							</ul>
+						</div>
+					</div>
+				</aside>
+
+				<h2 class="visually-hidden">О платформе Mini-app Q</h2>
+
+				<div class="global-statistic__heading section__heading">
+					<div class="round-icon-wrapper section__heading-image">
+						<svg class="global-statistic__title-icon round-icon" width="26" height="26" viewBox="0 0 26 26">
+							<use xlink:href="./images/icons/sprite-icons.svg#square"></use>
 						</svg>
 					</div>
 
-					<h3 class="who-uses__title section-heading__title">
-						Целевая аудитория
+					<h3 class="global-statistic__title section__heading-title">
+						Мировой крипторынок<br>
+						Капитализация
 					</h3>
 				</div>
 
-				<div class="who-uses__body">
-					<div class="who-uses__graph" style="--value-1: 42; --value-2: 23; --value-3: 23; --value-4: 12">
-						<div class="who-uses__graph-image" aria-hidden="true">
-							<span class="visually-hidden">Круговая диаграмма распределения аудитории</span>
-							<span class="who-uses__graph-image-value" data-value="42"></span>
-							<span class="who-uses__graph-image-value" data-value="23"></span>
-							<span class="who-uses__graph-image-value" data-value="23"></span>
-							<span class="who-uses__graph-image-value" data-value="12"></span>
-						</div>
+				<div class="global-statistic__body">
+					<h4 class="global-statistic__subtitle section__title">
+						<time datetime="2024">2024 год</time>
+					</h4>
 
-						<dl class="metrics-list">
-							<div class="metrics-list__item">
-								<dt class="metrics-list__value" data-value="42"></dt>
-								<dd class="metrics-list__name">Криптоинвесторы</dd>
-							</div>
-
-							<div class="metrics-list__item">
-								<dt class="metrics-list__value" data-value="23"></dt>
-								<dd class="metrics-list__name">Новички</dd>
-							</div>
-
-							<div class="metrics-list__item">
-								<dt class="metrics-list__value" data-value="23"></dt>
-								<dd class="metrics-list__name">Опытные пользователи</dd>
-							</div>
-
-							<div class="metrics-list__item">
-								<dt class="metrics-list__value" data-value="12"></dt>
-								<dd class="metrics-list__name">Стратегические партнеры</dd>
-							</div>
-						</dl>
+					<div class="global-statistic__text">
+						<p>
+							Совокупная <span class="accent-text">капитализация</span> криптовалютного рынка <span
+								class="accent-text">1,7 трлн</span>
+						</p>
+						<p>
+							Ежедневный торговый <span class="accent-text">оборот</span> составляет $ <span class="accent-text">50-80
+								млрд</span>
+						</p>
 					</div>
 
-					<div class="who-uses__referral-system referral-system">
-						<div class="referral-system__text">
+					<h4 class="global-statistic__subtitle section__title">
+						Ключевые метрики BITCOIN:
+					</h4>
+
+					<ul class="global-statistic__text-list">
+						<li class="global-statistic__text-item global-statistic__text">
 							<p>
-								Реферальная <span class="accent-text">система</span> наград:
+								Ежедневно создается <span class="accent-text">1,2</span> млн новых адресов
 							</p>
-						</div>
+						</li>
 
-						<h3 class="referral-system__subtitle">Релиз 1</h3>
-						<ul class="referral-system__list">
-							<li class="referral-system__item referral-system__text">
-
-								<span class="referral-system__item-value accent-text">0.77%</span> стейкинг с распределением от всех
-
-							</li>
-						</ul>
-
-						<h3 class="referral-system__subtitle">Релиз 2</h3>
-						<ul class="referral-system__list">
-							<li class="referral-system__item referral-system__text">
-
-								<span class="referral-system__item-value accent-text">0.55%</span> друга и от друга
-
-							</li>
-							<li class="referral-system__item referral-system__text">
-
-								<span class="referral-system__item-value accent-text">0.25%</span> между друзьями
-								<span class="referral-system__item-value accent-text">+ 1.75%</span> за друзей
-
-							</li>
-						</ul>
-					</div>
-				</div>
-			</aside>
-
-			<h2 class="visually-hidden">О платформе Mini-app Q</h2>
-
-			<div class="global-statistic__heading section-heading">
-				<div class="round-icon-wrapper section-heading__image">
-					<svg class="global-statistic__title-icon round-icon" width="26" height="26" viewBox="0 0 26 26">
-						<use xlink:href="./images/icons/sprite-icons.svg#square"></use>
-					</svg>
+						<li class="global-statistic__text-item global-statistic__text">
+							<p>
+								Дневной объем <span class="accent-text">транзакций</span> варьируется от $ <span class="accent-text">20
+									до
+									35 млрд</span>
+							</p>
+						</li>
+					</ul>
 				</div>
 
-				<h3 class="global-statistic__title section-heading__title">
-					Мировой крипторынок<br>
-					Капитализация
-				</h3>
+				<svg class="global-statistic__decor-image decor-image" width="88" height="111" viewBox="0 0 88 111">
+					<use xlink:href="./images/icons/sprite-icons.svg#decor-circles"></use>
+				</svg>
+
+				<h2 class="global-statistic__page-heading page-heading">
+					<span class="page-heading--accent accent-text">Q = Глобальный</span> крипторынок
+				</h2>
 			</div>
-
-			<div class="global-statistic__body">
-				<h4 class="global-statistic__subtitle section__title">
-					<time datetime="2024">2024 год</time>
-				</h4>
-
-				<div class="global-statistic__text">
-					<p>
-						Совокупная <span class="accent-text">капитализация</span> криптовалютного рынка <span
-							class="accent-text">1,7 трлн</span>
-					</p>
-					<p>
-						Ежедневный торговый <span class="accent-text">оборот</span> составляет $ <span class="accent-text">50-80
-							млрд</span>
-					</p>
-				</div>
-
-				<h4 class="global-statistic__subtitle section__title">
-					Ключевые метрики BITCOIN:
-				</h4>
-
-				<ul class="global-statistic__text-list">
-					<li class="global-statistic__text-item global-statistic__text">
-						<p>
-							Ежедневно создается <span class="accent-text">1,2</span> млн новых адресов
-						</p>
-					</li>
-
-					<li class="global-statistic__text-item global-statistic__text">
-						<p>
-							Дневной объем <span class="accent-text">транзакций</span> варьируется от $ <span class="accent-text">20 до
-								35 млрд</span>
-						</p>
-					</li>
-				</ul>
-			</div>
-
-
-			<svg class="global-statistic__decor-image decor-image" width="88" height="111" viewBox="0 0 88 111">
-				<use xlink:href="./images/icons/sprite-icons.svg#decor-circles"></use>
-			</svg>
-			<h2 class="global-statistic__page-heading page-heading">
-				<span class="page-heading--accent accent-text">Q = Глобальный</span> крипторынок
-			</h2>
-
 		</section>
+
+		<section class="originality section">
+			<h2 class="visually-hidden">Функциональность и уникальность Mini-app Q</h2>
+
+			<div class="originality__inner container">
+				<table class="originality__table table">
+					<caption class="originality__title table__title">
+						<span class="accent-text">Функциональность и уникальность</span> ( Q VS Binance, Bybit )
+					</caption>
+					<thead class="table__head">
+						<tr class="table__row table__row--head">
+							<th class="table__head-name">Функция</th>
+							<th class="table__head-name">Краткое действие</th>
+							<th class="table__head-name">Уникальность</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr class="table__row">
+							<td>Торговля фьючерсами</td>
+							<td>встроенная CEX с низкой комиссией</td>
+							<td>один счёт &rarr; слот &amp; деривативы</td>
+						</tr>
+						<tr class="table__row">
+							<td>Кошелёк Web 3.0</td>
+							<td>хранение всех токенов</td>
+							<td>мультисеть + Al-анализ рисков</td>
+						</tr>
+						<tr class="table__row">
+							<td>Венчур-крипто</td>
+							<td>кредиты, стейкинг, венчурные пулы</td>
+							<td>кооперативный подход</td>
+						</tr>
+						<tr class="table__row">
+							<td>Cloud-майнинг</td>
+							<td>подключение в 1 клик</td>
+							<td>база «железа» у пользователя</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+
+
+			<div class="originality__section-decor-background section__decor-background "></div>
+		</section>
+
+
 	</main>
 
 	<footer class="footer container">

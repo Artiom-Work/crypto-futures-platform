@@ -1,28 +1,19 @@
 .section {
-  // padding-block: var(--container-padding-y);
+  &__heading {
+    display: flex;
+    align-items: center;
 
-  // &--hidden-x {
-  //   overflow-x: hidden;
-  // }
-  // &__header {
-  //   display: flex;
-  //   align-items: center;
-  //   column-gap: 40px;
+    &-image {
+      margin-right: 22px;
+    }
 
-  //   @include mobile-media {
-  //     flex-direction: column;
-  //     row-gap: 30px;
-  //     text-align: center;
-  //   }
+    &-title {
+      @include fluid-text(27, 20);
+      font-weight: 700;
+    }
+  }
 
-  //   &:not(:last-child) {
-  //     margin-bottom: 80px;
-  //     @include mobile-media {
-  //       margin-bottom: 40px;
-  //     }
-  //   }
-  // }
-  // &__description {
-  //   max-width: 588px;
-  // }
+  &__decor-background {
+    background: var(--color-grad-1);
+  }
 }
