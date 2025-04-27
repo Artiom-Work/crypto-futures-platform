@@ -1,6 +1,11 @@
 :root {
   --color-dark: #191a23;
   --color-light: #ffffff;
+  --color-green: #00e9a8;
+  --color-green-light: #a3e9c3;
+  --color-blue: #0094ff;
+  --color-violet: #400478;
+  --color-gray: #edf8f2;
   --color-grad-1: linear-gradient(90deg, #00d1da 0%, #00feb2 100%);
   --color-grad-2: linear-gradient(270deg, #00feb2 0%, #00d1da 100%);
   --color-grad-3: linear-gradient(
@@ -21,7 +26,8 @@
 
   // --border: 1px solid var(--color-dark);
   --border-radius: 30px;
-  // --border-radius-small: 7px;
+  --border-radius-medium: 38px;
+  --border-radius-small: 5px;
   --border-radius-large: 93px;
 
   // --shadow: 0 5px 0 0 var(--color-dark);
@@ -33,7 +39,7 @@
 
   --container-width: 1880px;
   --container-padding-x: 20px;
-
+  --whoUsesMagrinTopMobile: 250px;
   // --container-padding-y: 70px;
 
   // --input-height: 59px;

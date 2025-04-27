@@ -9,6 +9,7 @@
   }
   @include mobile-media {
     padding-block: 30px 60px;
+    padding-inline: 20px;
   }
   &::before {
     @include square(clamp(96px, 15.1vw, 290px));
@@ -18,8 +19,17 @@
     background: var(--color-grad-3);
     border-radius: 50%;
     top: clamp(12px, 1.8vw, 36px);
-    left: clamp(90px, 49.7vw, 637px);
+    left: clamp(17vw, 49.7vw, 634px);
     z-index: 0;
+
+    @media (max-width: 1500px) {
+      left: 17vw;
+    }
+    @include mobile-media {
+      top: 50%;
+      left: 50%;
+      translate: -50% -50%;
+    }
   }
 
   &__heading {
@@ -33,10 +43,14 @@
   }
 
   &__title {
-    @include fluid-text(28, 20);
+    @include fluid-text(28, 17);
 
     text-transform: uppercase;
     line-height: 1.15;
+
+    @include mobile-media {
+      font-size: 20px;
+    }
     &-icon {
       width: clamp(17px, 2vw, 26px);
       aspect-ratio: 1;
@@ -46,7 +60,7 @@
   &__body {
     position: relative;
     padding-inline: clamp(5px, 0.88vw, 14px);
-    margin-block: 0 clamp(50px, 10.26vw, 194px);
+    margin-block: 0 clamp(50px, 5.26vw, 194px);
 
     @include mobile-media {
       margin-block: 0 30px;
@@ -75,8 +89,18 @@
     font-family: var(--font-family-base-accent-light);
     letter-spacing: 0;
     line-height: 1;
+
+    @media (max-width: 1000px) {
+      max-width: clamp(300px, 43vw, 450px);
+    }
+    @include mobile-media {
+      max-width: unset;
+    }
     p {
       margin: 0;
+    }
+    .accent-text {
+      white-space: nowrap;
     }
     &-list {
       list-style: disc;
@@ -121,5 +145,25 @@
     position: absolute;
     right: clamp(20px, 2.56vw, 60px);
     bottom: clamp(90px, 18.4vw, 354px);
+  }
+}
+.global-statistic__decor-image--top {
+  rotate: 90deg;
+  position: absolute;
+
+  top: -2.8vw;
+  right: 677px; // адаптировать
+
+  @include desktop-media {
+    right: 627px;
+  }
+  @include tablet-media {
+    right: 46.7vw;
+  }
+  @media (max-width: 1000px) {
+    right: 50vw;
+  }
+  @media (max-width: 900px) {
+    right: 53vw;
   }
 }

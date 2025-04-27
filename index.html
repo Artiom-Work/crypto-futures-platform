@@ -38,6 +38,7 @@
 					class="header__text header__text--accent">BLOCKCHAIN</span>
 			</p>
 		</div>
+
 		<svg class="header__decor-image decor-image" width="88" height="111" viewBox="0 0 88 111">
 			<use xlink:href="./images/icons/sprite-icons.svg#decor-circles"></use>
 		</svg>
@@ -81,6 +82,94 @@
 		</section>
 
 		<section class="global-statistic container">
+			<svg class="global-statistic__decor-image global-statistic__decor-image--top decor-image hidden-mobile" width="88"
+				height="111" viewBox="0 0 88 111">
+				<use xlink:href="./images/icons/sprite-icons.svg#decor-circles"></use>
+			</svg>
+
+
+			<aside class="who-uses">
+				<h2 class="visually-hidden">Кто пользуется Mini-app Q</h2>
+
+				<div class="who-uses__heading section-heading">
+					<div class="round-icon-wrapper section-heading__image">
+						<svg class="who-uses__title-icon round-icon" width="26" height="26" viewBox="0 0 26 26">
+							<use xlink:href="./images/icons/sprite-icons.svg#target"></use>
+						</svg>
+					</div>
+
+					<h3 class="who-uses__title section-heading__title">
+						Целевая аудитория
+					</h3>
+				</div>
+
+				<div class="who-uses__body">
+					<div class="who-uses__graph" style="--value-1: 42; --value-2: 23; --value-3: 23; --value-4: 12">
+						<div class="who-uses__graph-image" aria-hidden="true">
+							<span class="visually-hidden">Круговая диаграмма распределения аудитории</span>
+							<span class="who-uses__graph-image-value" data-value="42"></span>
+							<span class="who-uses__graph-image-value" data-value="23"></span>
+							<span class="who-uses__graph-image-value" data-value="23"></span>
+							<span class="who-uses__graph-image-value" data-value="12"></span>
+						</div>
+
+						<dl class="metrics-list">
+							<div class="metrics-list__item">
+								<dt class="metrics-list__value" data-value="42"></dt>
+								<dd class="metrics-list__name">Криптоинвесторы</dd>
+							</div>
+
+							<div class="metrics-list__item">
+								<dt class="metrics-list__value" data-value="23"></dt>
+								<dd class="metrics-list__name">Новички</dd>
+							</div>
+
+							<div class="metrics-list__item">
+								<dt class="metrics-list__value" data-value="23"></dt>
+								<dd class="metrics-list__name">Опытные пользователи</dd>
+							</div>
+
+							<div class="metrics-list__item">
+								<dt class="metrics-list__value" data-value="12"></dt>
+								<dd class="metrics-list__name">Стратегические партнеры</dd>
+							</div>
+						</dl>
+					</div>
+
+					<div class="who-uses__referral-system referral-system">
+						<div class="referral-system__text">
+							<p>
+								Реферальная <span class="accent-text">система</span> наград:
+							</p>
+						</div>
+
+						<h3 class="referral-system__subtitle">Релиз 1</h3>
+						<ul class="referral-system__list">
+							<li class="referral-system__item referral-system__text">
+
+								<span class="referral-system__item-value accent-text">0.77%</span> стейкинг с распределением от всех
+
+							</li>
+						</ul>
+
+						<h3 class="referral-system__subtitle">Релиз 2</h3>
+						<ul class="referral-system__list">
+							<li class="referral-system__item referral-system__text">
+
+								<span class="referral-system__item-value accent-text">0.55%</span> друга и от друга
+
+							</li>
+							<li class="referral-system__item referral-system__text">
+
+								<span class="referral-system__item-value accent-text">0.25%</span> между друзьями
+								<span class="referral-system__item-value accent-text">+ 1.75%</span> за друзей
+
+							</li>
+						</ul>
+					</div>
+				</div>
+			</aside>
+
 			<h2 class="visually-hidden">О платформе Mini-app Q</h2>
 
 			<div class="global-statistic__heading section-heading">
@@ -152,7 +241,7 @@
 	<!-- <script src="libs/swiper/swiper-bundle.min.js"></script> -->
 	<!-- <script src="libs/iziModal/iziModal.min.js"></script> -->
 	<!-- <script src="libs/bootstrap/bootstrap.bundle.min.js"></script> -->
-	<script type="module" src="/js/main.js"></script>
+	<script type="module" src="./js/main.js"></script>
 </body>
 
 </html>
