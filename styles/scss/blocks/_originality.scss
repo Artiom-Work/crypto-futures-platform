@@ -6,6 +6,33 @@
     max-width: 1455px;
     width: 100%;
     margin-inline: auto;
+
+    td,
+    th {
+      @media (max-width: 1000px) {
+        height: 76px;
+        text-align: center;
+      }
+      @include mobile-s-media {
+        font-size: 12px;
+        height: 60px;
+      }
+    }
+
+    &-row {
+      & td:first-child {
+        @include mobile-s-media {
+          font-size: 12px;
+        }
+      }
+      &--head {
+        th {
+          @include mobile-s-media {
+            font-size: 16px;
+          }
+        }
+      }
+    }
   }
 }
 .originality__title {

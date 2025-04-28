@@ -154,25 +154,31 @@
     position: absolute;
     right: clamp(20px, 2.56vw, 60px);
     bottom: clamp(90px, 18.4vw, 354px);
-  }
-}
-.global-statistic__decor-image--top {
-  rotate: 90deg;
-  position: absolute;
 
-  top: -2.8vw;
-  right: 677px; // адаптировать
+    &--top {
+      rotate: 90deg;
+      position: absolute;
+      top: -55px;
+      right: 677px;
 
-  @include desktop-media {
-    right: 627px;
-  }
-  @include tablet-media {
-    right: 46.7vw;
-  }
-  @media (max-width: 1000px) {
-    right: 50vw;
-  }
-  @media (max-width: 900px) {
-    right: 53vw;
+      @include desktop-media {
+        top: -2.8vw;
+        right: 627px;
+      }
+      @include tablet-media {
+        right: 46.7vw;
+      }
+      @media (max-width: 1000px) {
+        right: 50vw;
+      }
+      @media (max-width: 900px) {
+        right: 53vw;
+      }
+
+      @include mobile-media {
+        right: unset;
+        left: 0px;
+      }
+    }
   }
 }
