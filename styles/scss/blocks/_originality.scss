@@ -1,6 +1,6 @@
 .originality {
   &__inner {
-    padding-block: clamp(25px, 3.8vw, 75px) clamp(25px, 3.8vw, 82px);
+    padding-block: clamp(25px, 3.8vw, 75px) clamp(25px, 4vw, 82px);
   }
   &__table {
     max-width: 1455px;
@@ -18,6 +18,9 @@
         height: 60px;
       }
     }
+    &-title {
+      font-weight: 500;
+    }
 
     &-row {
       & td:first-child {
@@ -34,10 +37,7 @@
       }
     }
   }
-}
-.originality__title {
-}
-
-.originality__section-decor-background {
-  height: clamp(25px, 2.81vw, 54px);
+  &__decor-background {
+    height: clamp(25px, 2.81vw, 54px);
+  }
 }

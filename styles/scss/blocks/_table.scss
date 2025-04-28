@@ -1,18 +1,18 @@
 .table {
-  @include fluid-text(33, 20);
+  @include fluid-text(31, 20);
 
   border-collapse: separate;
   border-spacing: 0;
   border: 1px solid var(--color-gray-dark);
   border-radius: var(--border-radius-table);
-  letter-spacing: -0.03em;
   overflow: hidden;
+  font-family: var(--font-family-second);
+  letter-spacing: -0.03em;
 
   th,
   td {
-    padding: 13px 7px 5.2px 15px;
+    padding: 12px 7px 11px 19px;
     text-align: start;
-    font-family: var(--font-family-base-accent-light);
     font-weight: 500;
 
     @include mobile-media {
@@ -27,6 +27,9 @@
     &:not(:last-child) {
       border-right: 1px solid var(--color-gray-dark);
     }
+    &:not(:first-child) {
+      border-left: 2px solid var(--color-gray-dark);
+    }
     &:first-child {
       border-top-left-radius: calc(var(--border-radius-table) - 1px);
     }
@@ -40,30 +43,25 @@
   }
 
   &__title {
-    @include fluid-text(30, 20);
+    @include fluid-text(32, 20);
 
+    font-family: var(--font-family-base);
     margin-block: 0 clamp(15px, 2.3vw, 50px);
-    font-weight: 500;
+    font-weight: 700;
     text-align: center;
   }
 
   &__head {
-    border-radius: 15px 15px 0 0;
-
-    &-name {
-      font-family: var(--font-family-base) !important;
-    }
+    outline: 1px solid var(--color-gray-dark);
+    border-radius: 9px 9px 0 0;
   }
 
   &__row {
     & td:first-child {
-      font-family: var(--font-family-base);
-      @include fluid-text(35, 22);
       font-weight: 700;
     }
 
     &--head {
-      border: 1px solid var(--color-gray-dark);
       border-radius: 15px 15px 0 0;
     }
   }

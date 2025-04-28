@@ -55,7 +55,7 @@ a {
   letter-spacing: -0.06em;
 }
 
-.page-heading {
+.title-big {
   @include fluid-text(115, 22);
 
   font-family: var(--font-family-base-accent-light);
@@ -64,7 +64,7 @@ a {
   line-height: 1.53;
   white-space: nowrap;
 
-  &--accent {
+  &__accent-text {
     letter-spacing: -0.04em;
   }
 }
