@@ -43,6 +43,63 @@
 		<circle cx="68.973" cy="107.919" r="2.37838" fill="black"/>
 		<circle cx="85.6217" cy="107.919" r="2.37838" fill="black"/>
 	</symbol>
+
+	<symbol id="decor-circles-small">
+		<circle cx="1" cy="1" r="1" fill="black"/>
+		<circle cx="8" cy="1" r="1" fill="black"/>
+		<circle cx="15" cy="1" r="1" fill="black"/>
+		<circle cx="22" cy="1" r="1" fill="black"/>
+		<circle cx="29" cy="1" r="1" fill="black"/>
+		<circle cx="36" cy="1" r="1" fill="black"/>
+		<circle cx="1" cy="8" r="1" fill="black"/>
+		<circle cx="1" cy="15" r="1" fill="black"/>
+		<circle cx="1" cy="22" r="1" fill="black"/>
+		<circle cx="1" cy="29" r="1" fill="black"/>
+		<circle cx="1" cy="36" r="1" fill="black"/>
+		<circle cx="1" cy="43" r="1" fill="black"/>
+		<circle cx="1" cy="50" r="1" fill="black"/>
+		<circle cx="1" cy="57" r="1" fill="black"/>
+		<circle cx="8" cy="8" r="1" fill="black"/>
+		<circle cx="8" cy="15" r="1" fill="black"/>
+		<circle cx="8" cy="22" r="1" fill="black"/>
+		<circle cx="8" cy="29" r="1" fill="black"/>
+		<circle cx="8" cy="36" r="1" fill="black"/>
+		<circle cx="8" cy="43" r="1" fill="black"/>
+		<circle cx="8" cy="50" r="1" fill="black"/>
+		<circle cx="8" cy="57" r="1" fill="black"/>
+		<circle cx="15" cy="8" r="1" fill="black"/>
+		<circle cx="15" cy="15" r="1" fill="black"/>
+		<circle cx="15" cy="22" r="1" fill="black"/>
+		<circle cx="15" cy="29" r="1" fill="black"/>
+		<circle cx="15" cy="36" r="1" fill="black"/>
+		<circle cx="15" cy="43" r="1" fill="black"/>
+		<circle cx="15" cy="50" r="1" fill="black"/>
+		<circle cx="15" cy="57" r="1" fill="black"/>
+		<circle cx="22" cy="8" r="1" fill="black"/>
+		<circle cx="22" cy="15" r="1" fill="black"/>
+		<circle cx="22" cy="22" r="1" fill="black"/>
+		<circle cx="22" cy="29" r="1" fill="black"/>
+		<circle cx="22" cy="36" r="1" fill="black"/>
+		<circle cx="22" cy="43" r="1" fill="black"/>
+		<circle cx="22" cy="50" r="1" fill="black"/>
+		<circle cx="22" cy="57" r="1" fill="black"/>
+		<circle cx="29" cy="8" r="1" fill="black"/>
+		<circle cx="29" cy="15" r="1" fill="black"/>
+		<circle cx="29" cy="22" r="1" fill="black"/>
+		<circle cx="29" cy="29" r="1" fill="black"/>
+		<circle cx="29" cy="36" r="1" fill="black"/>
+		<circle cx="29" cy="43" r="1" fill="black"/>
+		<circle cx="29" cy="50" r="1" fill="black"/>
+		<circle cx="29" cy="57" r="1" fill="black"/>
+		<circle cx="36" cy="8" r="1" fill="black"/>
+		<circle cx="36" cy="15" r="1" fill="black"/>
+		<circle cx="36" cy="22" r="1" fill="black"/>
+		<circle cx="36" cy="29" r="1" fill="black"/>
+		<circle cx="36" cy="36" r="1" fill="black"/>
+		<circle cx="36" cy="43" r="1" fill="black"/>
+		<circle cx="36" cy="50" r="1" fill="black"/>
+		<circle cx="36" cy="57" r="1" fill="black"/>
+	</symbol>
  
 	<symbol id="document" fill="none">
 		<path d="M14.1961 2.0184H4.37939C3.72851 2.0184 3.10428 2.27697 2.64403 2.73721C2.18379 3.19746 1.92522 3.82169 1.92522 4.47257V24.1059C1.92522 24.7568 2.18379 25.3811 2.64403 25.8413C3.10428 26.3015 3.72851 26.5601 4.37939 26.5601H19.1044C19.7553 26.5601 20.3795 26.3015 20.8398 25.8413C21.3 25.3811 21.5586 24.7568 21.5586 24.1059V9.38091L14.1961 2.0184Z" stroke="black" stroke-width="2.45417" stroke-linecap="round" stroke-linejoin="round"/>
@@ -50,7 +107,6 @@
 		<path d="M16.6504 15.5163H6.83369" stroke="black" stroke-width="2.45417" stroke-linecap="round" stroke-linejoin="round"/>
 		<path d="M16.6504 20.4247H6.83369" stroke="black" stroke-width="2.45417" stroke-linecap="round" stroke-linejoin="round"/>
 	</symbol>
-
 
 	<symbol id="square" fill="none">
 		<circle cx="3" cy="3" r="2" stroke="black" stroke-width="2"/>
@@ -63,11 +119,9 @@
 		<line x1="23" y1="21" x2="23" y2="5" stroke="black" stroke-width="2"/>
 	</symbol>
 		
-
 	<symbol id="target" fill="none">
 		<circle cx="13" cy="13" r="3" fill="black"/>
 		<circle cx="13" cy="13" r="6.66667" stroke="black" stroke-width="2.66667"/>
 		<circle cx="13" cy="13" r="12" stroke="black" stroke-width="2"/>
 	</symbol>
 </svg> 
-
