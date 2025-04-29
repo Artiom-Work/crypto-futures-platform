@@ -78,7 +78,9 @@
         center / 110%;
       border-radius: 50%;
       box-shadow: var(--box-shadow);
-
+      @include hover {
+        color: var(--color-light);
+      }
       @include mobile-media {
         width: clamp(44px, 9.25vw, 71px);
       }

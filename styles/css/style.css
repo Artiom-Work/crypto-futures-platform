@@ -526,6 +526,16 @@ button[aria-label]::after {
   -webkit-box-shadow: var(--box-shadow);
           box-shadow: var(--box-shadow);
 }
+@media (hover: hover) {
+  .menu__link--home:hover {
+    color: var(--color-light);
+  }
+}
+@media (hover: none) {
+  .menu__link--home:active {
+    color: var(--color-light);
+  }
+}
 @media (max-width: 767px) {
   .menu__link--home {
     width: clamp(44px, 9.25vw, 71px);
