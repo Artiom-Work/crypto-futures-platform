@@ -166,18 +166,12 @@
         right: 627px;
       }
       @include tablet-media {
-        right: 46.7vw;
-      }
-      @media (max-width: 1000px) {
-        right: 50vw;
-      }
-      @media (max-width: 900px) {
-        right: 53vw;
+        right: max(437px, 46.7vw);
       }
 
       @include mobile-media {
-        right: unset;
-        left: 0px;
+        right: max(84.7vw, 293px);
+        top: -4vw;
       }
     }
   }
