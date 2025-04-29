@@ -27,5 +27,9 @@
 
   &__item {
     font-family: var(--font-family-base-accent-light);
+
+    &:not(:last-child) {
+      margin-bottom: 5px;
+    }
   }
 }

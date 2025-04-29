@@ -93,11 +93,11 @@
   }
 
   &__text {
-    @include fluid-text(32, 18);
+    @include fluid-text(32, 20);
 
     font-family: var(--font-family-base-accent-light);
     letter-spacing: 0;
-    line-height: 1;
+    line-height: 1.1;
 
     @media (max-width: 1000px) {
       max-width: clamp(300px, 43vw, 450px);
@@ -106,7 +106,7 @@
       max-width: unset;
     }
     p {
-      margin: 0;
+      --paragraphMarginBottom: 5px;
     }
     .accent-text {
       white-space: nowrap;
@@ -115,7 +115,11 @@
       list-style: disc;
     }
     &-item {
-      margin-inline: clamp(10px, 2.2vw, 38px) 0;
+      margin-inline: clamp(25px, 2.2vw, 38px) 0;
+
+      &:not(:last-child) {
+        margin-block: 0 5px;
+      }
     }
   }
 

@@ -15,7 +15,8 @@
   &__item {
     display: flex;
     align-items: center;
-    column-gap: 2px;
+    column-gap: 5px;
+    line-height: 1;
     font-weight: 700;
     font-size: 22px;
 
@@ -39,10 +40,19 @@
     @include flex-center(true);
 
     flex-shrink: 0;
-    padding-inline: 5px;
+    min-width: 55px;
+    height: 30px;
+    padding-block: 3px 0;
     border-radius: var(--border-radius-small);
     color: var(--color-light);
 
+    @include tablet-media {
+      min-width: clamp(40px, 4.29vw, 55px);
+      height: clamp(20px, 2.18vw, 28px);
+    }
+    @include mobile-s-media {
+      min-width: 35px;
+    }
     &::before {
       content: attr(data-value) "%";
     }
