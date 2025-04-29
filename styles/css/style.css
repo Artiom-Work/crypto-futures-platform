@@ -444,6 +444,13 @@ button[aria-label]::after {
           column-gap: clamp(36px, 15vw, 360px);
   width: 100vw;
 }
+@media (max-width: 480px) {
+  .menu__list {
+    -webkit-column-gap: 13vw;
+       -moz-column-gap: 13vw;
+            column-gap: 13vw;
+  }
+}
 .menu__item {
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;

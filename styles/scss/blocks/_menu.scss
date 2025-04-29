@@ -12,6 +12,10 @@
 
     column-gap: clamp(36px, 15vw, 360px);
     width: 100vw;
+
+    @include mobile-s-media {
+      column-gap: 13vw;
+    }
   }
 
   &__item {
