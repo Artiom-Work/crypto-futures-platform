@@ -22,7 +22,7 @@
 
 
 	<header class="header container">
-		<a class="header__logo logo" href="index.html" aria-label="Логотип Q">
+		<a class="header__logo logo" href="index.html" aria-label="Логотип Q" title="Q app">
 			<img class="logo__image" src="./images/icons/logo-icon.svg" width="100" height="100"
 				alt="Иконка логотипа компании">
 
@@ -43,12 +43,7 @@
 			<use xlink:href="./images/icons/sprite-icons.svg#decor-circles"></use>
 		</svg>
 
-		<!-- <nav class="menu">
-			<ul class="menu__list">
-				<li class="menu__item">
-				</li>
-			</ul>
-		</nav> -->
+
 	</header>
 
 	<main class="content">
@@ -433,12 +428,52 @@
 	</main>
 
 	<footer class="footer container">
-
-
-
-
 	</footer>
 
+	<nav class="menu">
+		<ul class="menu__list">
+			<li class="menu__item menu__item--ative">
+				<a class="menu__link" href="/q" aria-label="Ссылка на главную страницу" title="Перейти на гланую">
+					<svg class="menu__link-icon" width="44" height="44" viewBox="0 0 23 24">
+						<use xlink:href="./images/icons/sprite-icons.svg#home"></use>
+					</svg>
+				</a>
+			</li>
+
+			<li class="menu__item">
+				<a class="menu__link" href="/partner" aria-label="Ссылка на страницу партнёров" title="Страница патнёров">
+					<svg class="menu__link-icon" width="44" height="44" viewBox="0 0 24 24">
+						<use xlink:href="./images/icons/sprite-icons.svg#statistics"></use>
+					</svg>
+				</a>
+			</li>
+
+			<li class="menu__item">
+				<a class="menu__link menu__link--home" href="#!" aria-label="Ссылка на главную страницу"
+					title="На главную страницу">
+					<svg class="menu__link-icon" width="17" height="17" viewBox="0 0 19 20">
+						<use xlink:href="./images/icons/sprite-icons.svg#plus"></use>
+					</svg>
+				</a>
+			</li>
+
+			<li class="menu__item">
+				<a class="menu__link" href="/who" aria-label="Ссылка на страницу узнать больше" title="Узнать больше">
+					<svg class="menu__link-icon" width="44" height="44" viewBox="0 0 20 22">
+						<use xlink:href="./images/icons/sprite-icons.svg#bell"></use>
+					</svg>
+				</a>
+			</li>
+
+			<li class="menu__item">
+				<a class="menu__link" href="/profit" aria-label="Ссылка на о прибыли" title="О прибыли">
+					<svg class="menu__link-icon" width="44" height="44" viewBox="0 0 23 22">
+						<use xlink:href="./images/icons/sprite-icons.svg#gear"></use>
+					</svg>
+				</a>
+			</li>
+		</ul>
+	</nav>
 
 	<!-- <script src="libs/jquery/jquery-3.7.1.min.js"></script>  for accordion and modal-->
 	<!-- <script src="/libs/jquery/jquery-ui.1.14.0.min.js"></script> for accordion-->

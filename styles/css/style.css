@@ -171,6 +171,7 @@ svg * {
   --color-gray: #edf8f2;
   --color-gray-medium: #e6e6e6;
   --color-gray-dark: #bfbfbf;
+  --color-gray-icon: #d2d2d2;
   --color-green: #00e9a8;
   --color-green-light: #a3e9c3;
   --color-blue: #0094ff;
@@ -193,13 +194,21 @@ svg * {
   --border-radius: 30px;
   --border-radius-medium: 38px;
   --border-radius-large: 93px;
+  --box-shadow: 0 5px 6px rgba(0, 0, 0, 0.2);
+  --box-shadow-2: 0 -2px 10px rgba(0, 0, 0, 0.05);
   --font-family-base: "Futura", sans-serif;
   --font-family-base-accent-light: "Futura book light", sans-serif;
   --font-family-second: "Inter", sans-serif;
   --container-width: 1880px;
+  --menuHeight: 80px;
   --container-padding-x: 20px;
   --whoUsesMagrinTopMobile: 250px;
   --transition-duration: 0.3s;
+}
+@media (max-width: 767px) {
+  :root {
+    --menuHeight: clamp(50px, 10.43vw, 80px);
+  }
 }
 
 .container {
@@ -249,6 +258,7 @@ body {
   line-height: 1.28;
   color: var(--color-dark);
   background-color: var(--color-light);
+  padding-block: 0 var(--menuHeight);
 }
 
 .content {
@@ -269,6 +279,21 @@ svg * {
 a {
   text-decoration: none;
   color: inherit;
+}
+
+a[aria-label],
+button[aria-label] {
+  position: relative;
+}
+a[aria-label]::after,
+button[aria-label]::after {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  translate: -50% -50%;
+  width: 44px;
+  aspect-ratio: 1;
+  content: "";
 }
 
 .accent-text {
@@ -391,6 +416,112 @@ a {
 @media (max-width: 1920px) {
   .header__decor-image {
     right: 2.87vw;
+  }
+}
+
+.menu {
+  position: fixed;
+  z-index: 3;
+  bottom: 0;
+  left: 0;
+  height: var(--menuHeight);
+  background-color: var(--color-light);
+  -webkit-box-shadow: var(--box-shadow-2);
+          box-shadow: var(--box-shadow-2);
+}
+.menu__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-column-gap: clamp(36px, 15vw, 360px);
+     -moz-column-gap: clamp(36px, 15vw, 360px);
+          column-gap: clamp(36px, 15vw, 360px);
+  width: 100vw;
+}
+.menu__item {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  color: var(--color-gray-icon);
+  fill: currentColor;
+}
+.menu__item--ative {
+  color: var(--color-blue);
+}
+.menu__item--ative a {
+  position: relative;
+}
+.menu__item--ative a::before {
+  --circleWidth: clamp(4.6px, 0.52vw, 10px);
+  width: var(--circleWidth);
+  aspect-ratio: 1;
+  position: absolute;
+  content: "";
+  border-radius: 50%;
+  bottom: calc((var(--circleWidth) + 5px) * -1);
+  left: 50%;
+  translate: -50% 0;
+  background: currentColor;
+  z-index: 10;
+}
+@media (max-width: 1200px) {
+  .menu__item--ative a::before {
+    bottom: 0;
+  }
+}
+@media (hover: hover) {
+  .menu__link:hover {
+    color: var(--color-blue);
+    -webkit-filter: brightness(80%);
+            filter: brightness(80%);
+  }
+}
+@media (hover: none) {
+  .menu__link:active {
+    color: var(--color-blue);
+    -webkit-filter: brightness(80%);
+            filter: brightness(80%);
+  }
+}
+.menu__link:active {
+  scale: 0.92;
+}
+.menu__link-icon {
+  -webkit-transition-duration: var(--transition-duration);
+          transition-duration: var(--transition-duration);
+  width: clamp(22px, 2.29vw, 44px);
+  aspect-ratio: 1;
+}
+.menu__link--home {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: relative;
+  top: -10px;
+  width: 71px;
+  color: var(--color-dark);
+  aspect-ratio: 1;
+  stroke: currentColor;
+  background: url(../../images/icons/button-home-background.webp) no-repeat center/110%;
+  border-radius: 50%;
+  -webkit-box-shadow: var(--box-shadow);
+          box-shadow: var(--box-shadow);
+}
+@media (max-width: 767px) {
+  .menu__link--home {
+    width: clamp(44px, 9.25vw, 71px);
   }
 }
 

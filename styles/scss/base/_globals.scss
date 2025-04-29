@@ -9,6 +9,7 @@ body {
   line-height: 1.28;
   color: var(--color-dark);
   background-color: var(--color-light);
+  padding-block: 0 var(--menuHeight);
 }
 .content {
   flex-grow: 1;
@@ -24,7 +25,19 @@ a {
   text-decoration: none;
   color: inherit;
 }
+a,
+button {
+  &[aria-label] {
+    position: relative;
 
+    &::after {
+      @include abs-center;
+      @include square(44px);
+
+      content: "";
+    }
+  }
+}
 //titles
 // h1,
 // h2,

@@ -1,0 +1,83 @@
+.menu {
+  position: fixed;
+  z-index: 3;
+  bottom: 0;
+  left: 0;
+  height: var(--menuHeight);
+  background-color: var(--color-light);
+  box-shadow: var(--box-shadow-2);
+
+  &__list {
+    @include flex-center;
+
+    column-gap: clamp(36px, 15vw, 360px);
+    width: 100vw;
+  }
+
+  &__item {
+    display: inline-flex;
+    color: var(--color-gray-icon);
+    fill: currentColor;
+
+    &--ative {
+      color: var(--color-blue);
+
+      a {
+        position: relative;
+
+        &::before {
+          --circleWidth: clamp(4.6px, 0.52vw, 10px);
+          @include square(var(--circleWidth));
+
+          position: absolute;
+          content: "";
+
+          border-radius: 50%;
+          bottom: calc((var(--circleWidth) + 5px) * -1);
+          left: 50%;
+          translate: -50% 0;
+          background: currentColor;
+          z-index: 10;
+
+          @media (max-width: 1200px) {
+            bottom: 0;
+          }
+        }
+      }
+    }
+  }
+
+  &__link {
+    @include hover {
+      color: var(--color-blue);
+      filter: brightness(80%);
+    }
+    @include active {
+      scale: 0.92;
+    }
+    &-icon {
+      transition-duration: var(--transition-duration);
+      width: clamp(22px, 2.29vw, 44px);
+      aspect-ratio: 1;
+    }
+
+    &--home {
+      @include flex-center(true);
+
+      position: relative;
+      top: -10px;
+      width: 71px;
+      color: var(--color-dark);
+      aspect-ratio: 1;
+      stroke: currentColor;
+      background: url(../../images/icons/button-home-background.webp) no-repeat
+        center / 110%;
+      border-radius: 50%;
+      box-shadow: var(--box-shadow);
+
+      @include mobile-media {
+        width: clamp(44px, 9.25vw, 71px);
+      }
+    }
+  }
+}
