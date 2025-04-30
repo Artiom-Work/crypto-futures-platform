@@ -23,8 +23,20 @@
     }
   }
   &__heading {
+    border-radius: var(--border-radius-small);
     background: var(--color-grad-1);
     padding-block: var(--indentBig);
+
+    &--center {
+      padding-block: var(--indent);
+      padding-inline: var(--container-padding-x);
+      margin-block: 0 var(--indent);
+      margin-inline: calc(var(--container-padding-x) * -1);
+
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
   }
   &__title {
     position: relative;
@@ -61,8 +73,6 @@
     position: relative;
     z-index: 1;
     @include fluid-text(30, 24);
-
-    // margin-block: 0 var(--indentBig);
   }
 
   &__table {
@@ -108,6 +118,12 @@
       left: unset;
       right: 0;
       rotate: unset;
+    }
+    &--rotate {
+      rotate: 90deg;
+    }
+    &--top {
+      top: -50%;
     }
     &--table-block {
       left: unset;
