@@ -165,6 +165,41 @@ svg * {
   font-style: normal;
   font-display: swap;
 }
+@font-face {
+  font-family: "Roboto";
+  src: url("../../fonts/Roboto-Italic.woff2") format("woff2");
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Roboto";
+  src: url("../../fonts/Roboto-Regular.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Roboto";
+  src: url("../../fonts/Roboto-Medium.woff2") format("woff2");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Roboto";
+  src: url("../../fonts/Roboto-Bold.woff2") format("woff2");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Roboto";
+  src: url("../../fonts/Roboto-Black.woff2") format("woff2");
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
 :root {
   --color-dark: #191a23;
   --color-light: #ffffff;
@@ -199,10 +234,14 @@ svg * {
   --font-family-base: "Futura", sans-serif;
   --font-family-base-accent-light: "Futura book light", sans-serif;
   --font-family-second: "Inter", sans-serif;
+  --font-family-alternate: "Roboto", sans-serif;
   --container-width: 1880px;
   --menuHeight: 80px;
   --container-padding-x: 20px;
   --whoUsesMagrinTopMobile: 250px;
+  --indentSmall: clamp(12.5px, 1.25vw, 25px);
+  --indent: clamp(25px, 2.5vw, 50px);
+  --indentBig: clamp(40px, 3.9vw, 75px);
   --transition-duration: 0.3s;
 }
 @media (max-width: 767px) {
@@ -296,6 +335,41 @@ button[aria-label]::after {
   content: "";
 }
 
+h1,
+h2,
+h3,
+h4 {
+  font-weight: 500;
+}
+
+.h1,
+.h2,
+.h3,
+.h4 {
+  line-height: 1;
+  margin-block: 0;
+}
+
+h1,
+.h1 {
+  font-size: clamp(43px, 3.2291666667vw, 62px);
+}
+
+h2,
+.h2 {
+  font-size: clamp(40px, 3.125vw, 60px);
+}
+
+h3,
+.h3 {
+  font-size: clamp(30px, 2.6041666667vw, 50px);
+}
+
+h4,
+.h4 {
+  font-size: clamp(20px, 2.0833333333vw, 40px);
+}
+
 .accent-text {
   font-family: var(--font-family-base);
   font-weight: 700;
@@ -333,6 +407,42 @@ button[aria-label]::after {
           align-items: center;
   background: var(--color-grad-2);
   border-radius: 50%;
+}
+
+.decor-circle {
+  position: relative;
+}
+.decor-circle::after {
+  position: absolute;
+  content: "";
+  width: clamp(50px, 5.3vw, 102px);
+  aspect-ratio: 1;
+  background: var(--color-grad-5);
+  border-radius: 50%;
+  z-index: -1;
+  top: -50%;
+}
+.decor-circle--big::after, .decor-circle--big::before {
+  width: clamp(100px, 10.42vw, 200px);
+}
+.decor-circle--right::after {
+  right: 0;
+}
+.decor-circle--center::after {
+  top: 50%;
+  left: 50%;
+  translate: -50% -50%;
+}
+.decor-circle--left::before {
+  position: absolute;
+  content: "";
+  width: clamp(50px, 5.3vw, 102px);
+  aspect-ratio: 1;
+  background: var(--color-grad-5);
+  border-radius: 50%;
+  z-index: -1;
+  top: 0;
+  left: 0;
 }
 
 .logo {
@@ -559,6 +669,7 @@ button[aria-label]::after {
 }
 .section__decor-background {
   background: var(--color-grad-1);
+  height: clamp(25px, 2.81vw, 54px);
 }
 
 .about {
@@ -1129,6 +1240,10 @@ button[aria-label]::after {
   border-radius: 15px 15px 0 0;
 }
 
+.calc-table {
+  font-family: var(--font-family-second);
+}
+
 .originality__inner {
   padding-block: clamp(25px, 3.8vw, 75px) clamp(25px, 4vw, 82px);
 }
@@ -1455,6 +1570,132 @@ button[aria-label]::after {
 }
 .preview-galery__decor-background {
   height: clamp(25px, 2.81vw, 54px);
+}
+
+.platform-description {
+  font-size: clamp(16px, 1.25vw, 24px);
+  padding-block: var(--indentBig) 0;
+  font-family: var(--font-family-alternate);
+  font-weight: 400;
+  line-height: 1.27;
+}
+@media (max-width: 1920px) {
+  .platform-description p {
+    --paragraphMarginBottom: 25px;
+  }
+}
+@media (max-width: 1280px) {
+  .platform-description p {
+    --paragraphMarginBottom: 20px;
+  }
+}
+@media (max-width: 767px) {
+  .platform-description p {
+    --paragraphMarginBottom: 15px;
+  }
+}
+
+.platform-description__title {
+  text-align: center;
+  margin-inline: auto;
+  margin-block: 0 var(--indent);
+  font-weight: 900;
+}
+.platform-description__title:first-child {
+  max-width: clamp(300px, 26.04vw, 550px);
+  width: 100%;
+}
+.platform-description__title--medium {
+  max-width: 1200px;
+  width: 100%;
+}
+
+.platform-description__main-desc {
+  font-size: clamp(24px, 1.5625vw, 30px);
+  margin-block: 0 var(--indentBig);
+}
+
+.block-text {
+  padding-block: var(--indent);
+}
+.block-text__title {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  font-weight: 700;
+  margin-block: 0 var(--indent);
+}
+.block-text__title::after {
+  top: -50px;
+}
+.block-text__subtitle {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-column-gap: clamp(14px, 1.3vw, 25px);
+     -moz-column-gap: clamp(14px, 1.3vw, 25px);
+          column-gap: clamp(14px, 1.3vw, 25px);
+  margin-block: 0 var(--indentSmall);
+  font-weight: 700;
+}
+.block-text__subtitle::before {
+  width: clamp(44px, 2.8vw, 54px);
+  aspect-ratio: 1;
+  content: "";
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: var(--color-grad-2);
+  border-radius: 50%;
+  left: 0;
+}
+.block-text__text {
+  padding-inline: var(--indentSmall);
+}
+.block-text__text:not(:last-child) {
+  margin-block: 0 var(--indent);
+}
+.block-text__decor-devider {
+  height: clamp(12.5px, 1.25vw, 25px);
+  margin-block: 0 var(--indent);
+  border-radius: var(--border-radius-small);
+}
+.block-text__table {
+  font-size: clamp(9px, 1.25vw, 24px);
+  margin-block: var(--indent);
+}
+.block-text__table thead {
+  font-weight: 500;
+}
+.block-text__table th {
+  padding: 0 clamp(5px, 1.04vw, 20px) clamp(5px, 1.04vw, 20px);
+}
+.block-text__table td {
+  vertical-align: text-top;
+  padding: clamp(2px, 1.04vw, 20px);
+}
+@media (max-width: 480px) {
+  .block-text__table {
+    margin-inline: calc(var(--container-padding-x) * -1);
+  }
+}
+.block-text ul,
+.block-text ol {
+  margin-block: 0 var(--indent);
+  padding-inline: var(--indentBig);
+}
+.block-text ul li:not(:last-child),
+.block-text ol li:not(:last-child) {
+  margin-block: 0 var(--indentSmall);
 }
 
 .footer {

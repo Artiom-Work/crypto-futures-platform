@@ -1,0 +1,45 @@
+.platform-description {
+  @include fluid-text(24, 16);
+
+  padding-block: var(--indentBig) 0;
+  font-family: var(--font-family-alternate);
+  font-weight: 400;
+  line-height: 1.27;
+  @include desktop-media {
+    p {
+      --paragraphMarginBottom: 25px;
+    }
+  }
+  @include tablet-media {
+    p {
+      --paragraphMarginBottom: 20px;
+    }
+  }
+  @include mobile-media {
+    p {
+      --paragraphMarginBottom: 15px;
+    }
+  }
+}
+
+.platform-description__title {
+  text-align: center;
+
+  margin-inline: auto;
+  margin-block: 0 var(--indent);
+  font-weight: 900;
+  &:first-child {
+    max-width: clamp(300px, 26.04vw, 550px);
+    width: 100%;
+  }
+  &--medium {
+    max-width: 1200px;
+    width: 100%;
+  }
+}
+
+.platform-description__main-desc {
+  @include fluid-text(30, 24);
+
+  margin-block: 0 var(--indentBig);
+}

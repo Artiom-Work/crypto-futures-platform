@@ -39,11 +39,16 @@
   // --font-family-base-accent: "Futura book medium", sans-serif;
   --font-family-base-accent-light: "Futura book light", sans-serif;
   --font-family-second: "Inter", sans-serif;
+  --font-family-alternate: "Roboto", sans-serif;
 
   --container-width: 1880px;
   --menuHeight: 80px;
   --container-padding-x: 20px;
   --whoUsesMagrinTopMobile: 250px;
+
+  --indentSmall: clamp(12.5px, 1.25vw, 25px);
+  --indent: clamp(25px, 2.5vw, 50px);
+  --indentBig: clamp(40px, 3.9vw, 75px);
 
   // --input-height: 59px;
   // --button-height: 68px;

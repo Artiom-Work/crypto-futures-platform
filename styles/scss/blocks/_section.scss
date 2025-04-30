@@ -15,5 +15,6 @@
 
   &__decor-background {
     background: var(--color-grad-1);
+    height: clamp(25px, 2.81vw, 54px);
   }
 }
