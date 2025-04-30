@@ -23,7 +23,8 @@
     }
   }
   &__heading {
-    border-radius: var(--border-radius-small);
+    position: relative;
+    border-radius: var(--border-radius);
     background: var(--color-grad-1);
     padding-block: var(--indentBig);
 
@@ -158,8 +159,26 @@
       @include decor-position-top-left;
     }
     &::after {
-      @include decor-circle-color-small();
+      @include decor-circle-color-small;
       @include decor-position-bottom-right;
+    }
+  }
+  &__heading {
+    &--center {
+      position: relative;
+      z-index: 1;
+      &::before {
+        @include decor-circle-color-big(true);
+        @include decor-position-bottom-left;
+
+        z-index: 0;
+      }
+      &::after {
+        @include decor-circle-small;
+        @include decor-position-center;
+
+        translate: 200% -20px;
+      }
     }
   }
 }

@@ -104,12 +104,10 @@
   // }
   &__title {
     position: relative;
-    &::before {
-      @include decor-circle-big(true);
-      @include decor-position-center;
-
-      translate: -100% -20px;
-    }
+    // &::before {
+    //   @include decor-circle-big;
+    //   @include decor-position-center;
+    // }
   }
 
   &__text {
