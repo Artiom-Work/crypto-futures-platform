@@ -77,3 +77,143 @@
     }
   }
 }
+// Styles for decor
+.block-text {
+  position: relative;
+
+  &::after {
+    @include decor-circle-big;
+    @include decor-position-bottom-right;
+  }
+  &::before {
+    @include decor-circle-big;
+    @include decor-position-bottom-right;
+  }
+  &__title {
+    position: relative;
+    &::before {
+      @include decor-circle-big(true);
+      @include decor-position-center;
+
+      translate: -100% -20px;
+    }
+  }
+
+  &__text {
+    p {
+      position: relative;
+    }
+
+    & p:nth-child(4n) {
+      position: relative;
+      &::after {
+        @include decor-circle-small;
+        @include decor-position-top-left;
+
+        translate: 170px -50%;
+      }
+    }
+    & p:nth-child(5n) {
+      position: relative;
+      &::before {
+        @include decor-circle-big;
+        @include decor-position-center;
+      }
+    }
+  }
+
+  &__decor-devider {
+  }
+
+  &__table {
+    thead {
+      position: relative;
+      &::before {
+        @include decor-circle-big(true);
+        @include decor-position-top-right;
+      }
+      &::after {
+        @include decor-circle-big;
+        @include decor-position-top-left;
+      }
+    }
+    tbody {
+      position: relative;
+      &::before {
+        @include decor-circle-small;
+        @include decor-position-bottom-left;
+      }
+      &::after {
+        @include decor-circle-big(true);
+        @include decor-position-center;
+      }
+    }
+    th {
+    }
+    td {
+    }
+  }
+
+  ul,
+  ol {
+    li {
+      position: relative;
+    }
+    li:nth-child(4n) {
+      &::before {
+        @include decor-circle-small(true);
+        @include decor-position-bottom-left;
+      }
+    }
+    li:nth-child(5n) {
+      &::before {
+        @include decor-circle-small;
+        @include decor-position-top-left;
+
+        translate: 140px -50%;
+      }
+    }
+    // li:nth-child(2) {
+    //   &::after {
+    //     @include decor-circle-big(true);
+    //     @include decor-position-bottom-right;
+
+    //     translate: 50% 40px;
+    //   }
+    // }
+  }
+  ul:not(:last-child) {
+    li:nth-child(8n + 1) {
+      &::after {
+        @include decor-circle-small;
+        @include decor-position-center;
+
+        translate: -100% 0;
+      }
+    }
+    li:nth-child(8n + 4) {
+      &::after {
+        @include decor-circle-big;
+        @include decor-position-center;
+
+        translate: 100% 0;
+      }
+    }
+    li:nth-child(4n + 3) {
+      &::after {
+        @include decor-circle-small(true);
+        @include decor-position-bottom-right;
+
+        translate: -50% 50;
+      }
+    }
+    // li:nth-child(2) {
+    //   &::after {
+    //     @include decor-circle-big(true);
+    //     @include decor-position-top-left;
+
+    //     translate: 50% 40px;
+    //   }
+    // }
+  }
+}

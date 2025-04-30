@@ -5,41 +5,90 @@
   font-family: var(--font-family-alternate);
   font-weight: 400;
   line-height: 1.27;
+
   @include desktop-media {
     p {
       --paragraphMarginBottom: 25px;
     }
   }
+
   @include tablet-media {
     p {
       --paragraphMarginBottom: 20px;
     }
   }
+
   @include mobile-media {
     p {
       --paragraphMarginBottom: 15px;
     }
   }
+
+  &__title {
+    text-align: center;
+    position: relative;
+    margin-inline: auto;
+    margin-block: 0 var(--indent);
+    font-weight: 900;
+
+    &:first-child {
+      max-width: clamp(300px, 26.04vw, 550px);
+      width: 100%;
+
+      &::after {
+        @include decor-circle-big;
+        @include decor-position-top-right;
+        translate: 25% -50%;
+      }
+    }
+    &--medium {
+      max-width: 1200px;
+      width: 100%;
+      margin-block: var(--indent);
+
+      &::after {
+        @include decor-circle-big;
+        @include decor-position-center;
+      }
+    }
+  }
+
+  &__main-desc {
+    @include fluid-text(30, 24);
+
+    margin-block: 0 var(--indentBig);
+  }
 }
 
-.platform-description__title {
-  text-align: center;
+// Styles for decor
+.platform-description {
+  &__title {
+    position: relative;
 
-  margin-inline: auto;
-  margin-block: 0 var(--indent);
-  font-weight: 900;
-  &:first-child {
-    max-width: clamp(300px, 26.04vw, 550px);
-    width: 100%;
+    &:first-child {
+      &::after {
+        @include decor-circle-big;
+        @include decor-position-top-right;
+        translate: 25% -50%;
+      }
+    }
+    &--medium {
+      &::after {
+        @include decor-circle-big;
+        @include decor-position-center;
+      }
+    }
   }
-  &--medium {
-    max-width: 1200px;
-    width: 100%;
+
+  &__main-desc {
+    position: relative;
+    &::before {
+      @include decor-circle-big(true);
+      @include decor-position-top-left;
+    }
+    &::after {
+      @include decor-circle-small();
+      @include decor-position-bottom-right;
+    }
   }
-}
-
-.platform-description__main-desc {
-  @include fluid-text(30, 24);
-
-  margin-block: 0 var(--indentBig);
 }
