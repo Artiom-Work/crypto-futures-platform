@@ -46,6 +46,15 @@
     border-radius: var(--border-radius-small);
   }
 
+  &__table-box {
+    background: var(--color-grad-1);
+    margin-inline: calc(var(--container-padding-x) * -1);
+    padding-inline: var(--container-padding-x);
+    padding-block: var(--indent);
+    margin-block: var(--indent);
+    border-radius: var(--border-radius);
+  }
+
   &__table {
     @include fluid-text(24, 9);
     margin-block: var(--indent);
@@ -81,14 +90,14 @@
 .block-text {
   position: relative;
 
-  &::after {
-    @include decor-circle-big;
-    @include decor-position-bottom-right;
-  }
-  &::before {
-    @include decor-circle-big;
-    @include decor-position-bottom-right;
-  }
+  // &::after {
+  //   @include decor-circle-big;
+  //   @include decor-position-bottom-right;
+  // }
+  // &::before {
+  //   @include decor-circle-big;
+  //   @include decor-position-bottom-right;
+  // }
   &__title {
     position: relative;
     &::before {
@@ -122,9 +131,6 @@
     }
   }
 
-  &__decor-devider {
-  }
-
   &__table {
     thead {
       position: relative;
@@ -154,6 +160,19 @@
     }
   }
 
+  &__table-box {
+    position: relative;
+    z-index: -1;
+
+    &::before {
+      @include decor-circle-color-big(true);
+      @include decor-position-top-left;
+    }
+    &::after {
+      @include decor-circle-big;
+      @include decor-position-bottom-right;
+    }
+  }
   ul,
   ol {
     li {

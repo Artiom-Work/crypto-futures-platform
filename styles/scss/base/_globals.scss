@@ -74,7 +74,9 @@ h4,
   font-weight: 700;
   letter-spacing: -0.06em;
 }
-
+.bold-text {
+  font-weight: 700;
+}
 .title-big {
   @include fluid-text(115, 22);
 

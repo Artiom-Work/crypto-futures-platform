@@ -1,7 +1,6 @@
 .platform-description {
   @include fluid-text(24, 16);
 
-  padding-block: var(--indentBig) 0;
   font-family: var(--font-family-alternate);
   font-weight: 400;
   line-height: 1.27;
@@ -23,8 +22,13 @@
       --paragraphMarginBottom: 15px;
     }
   }
-
+  &__heading {
+    background: var(--color-grad-1);
+    padding-block: var(--indentBig);
+  }
   &__title {
+    position: relative;
+    z-index: 1;
     text-align: center;
     position: relative;
     margin-inline: auto;
@@ -54,40 +58,91 @@
   }
 
   &__main-desc {
+    position: relative;
+    z-index: 1;
     @include fluid-text(30, 24);
 
-    margin-block: 0 var(--indentBig);
+    // margin-block: 0 var(--indentBig);
+  }
+
+  &__table {
+    @include fluid-text(24, 16);
+    margin-inline: auto;
+    margin-block: 0 var(--indent);
+
+    @include mobile-s-media {
+      font-size: 12px;
+    }
+    caption {
+      font-family: var(--font-family-alternate);
+    }
+    th,
+    td {
+      padding-inline: clamp(10px, 1.04vw, 20px);
+
+      @include mobile-s-media {
+        padding-inline: 3px;
+      }
+    }
+    td {
+      background: var(--color-light);
+    }
+
+    &--small {
+      @include fluid-text(26, 16);
+      max-width: 850px;
+      width: 100%;
+
+      @include mobile-s-media {
+        font-size: 12px;
+      }
+    }
+  }
+
+  &__decor-image {
+    position: absolute;
+    left: 0;
+    rotate: 90deg;
+
+    &--right {
+      left: unset;
+      right: 0;
+      rotate: unset;
+    }
+    &--table-block {
+      left: unset;
+      right: 0;
+      top: -30px;
+      margin-right: 20px;
+    }
   }
 }
 
 // Styles for decor
 .platform-description {
   &__title {
-    position: relative;
-
     &:first-child {
       &::after {
-        @include decor-circle-big;
+        @include decor-circle-color-big;
         @include decor-position-top-right;
         translate: 25% -50%;
       }
     }
     &--medium {
       &::after {
-        @include decor-circle-big;
+        @include decor-circle-color-big;
         @include decor-position-center;
       }
     }
   }
 
   &__main-desc {
-    position: relative;
     &::before {
-      @include decor-circle-big(true);
+      @include decor-circle-color-big(true);
       @include decor-position-top-left;
     }
     &::after {
-      @include decor-circle-small();
+      @include decor-circle-color-small();
       @include decor-position-bottom-right;
     }
   }
