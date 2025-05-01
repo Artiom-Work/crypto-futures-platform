@@ -47,17 +47,14 @@
     margin-inline: auto;
     margin-block: 0 var(--indent);
     font-weight: 900;
+    max-width: clamp(300px, 26.04vw, 550px);
+    width: 100%;
 
-    &:first-child {
-      max-width: clamp(300px, 26.04vw, 550px);
-      width: 100%;
-
-      &::after {
-        @include decor-circle-big;
-        @include decor-position-top-right;
-        translate: 25% -50%;
-      }
+    &--big {
+      @include fluid-text(45, 26);
+      max-width: clamp(300px, 62vw, 1200px);
     }
+
     &--medium {
       max-width: 1200px;
       width: 100%;
@@ -74,6 +71,10 @@
     position: relative;
     z-index: 1;
     @include fluid-text(30, 24);
+
+    &--small {
+      @include fluid-text(26, 18);
+    }
   }
 
   &__table {
