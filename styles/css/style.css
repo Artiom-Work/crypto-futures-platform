@@ -533,6 +533,8 @@ h4,
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
   display: inline-flex;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
   color: var(--color-gray-icon);
   fill: currentColor;
 }
@@ -598,11 +600,15 @@ h4,
   width: 71px;
   color: var(--color-dark);
   aspect-ratio: 1;
-  stroke: currentColor;
-  background: url(../../images/icons/button-home-background.webp) no-repeat center/110%;
   border-radius: 50%;
   -webkit-box-shadow: var(--box-shadow);
           box-shadow: var(--box-shadow);
+}
+.menu__link--home .main #animation-container {
+  width: 200% !important;
+  height: 200% !important;
+  left: -50% !important;
+  top: -50% !important;
 }
 @media (hover: hover) {
   .menu__link--home:hover {
@@ -617,6 +623,7 @@ h4,
 @media (max-width: 767px) {
   .menu__link--home {
     width: clamp(44px, 9.25vw, 71px);
+    height: clamp(44px, 9.25vw, 71px);
   }
 }
 
