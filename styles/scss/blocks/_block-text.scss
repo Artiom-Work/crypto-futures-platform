@@ -99,21 +99,6 @@
 .block-text {
   position: relative;
 
-  // &::after {
-  //   @include decor-circle-big;
-  //   @include decor-position-bottom-right;
-  // }
-  // &::before {
-  //   @include decor-circle-big;
-  //   @include decor-position-bottom-right;
-  // }
-  &__title {
-    // &::before {
-    //   @include decor-circle-big;
-    //   @include decor-position-center;
-    // }
-  }
-
   &__text {
     p {
       position: relative;
@@ -160,10 +145,6 @@
         @include decor-position-center;
       }
     }
-    th {
-    }
-    td {
-    }
   }
 
   &__table-box {
@@ -198,14 +179,6 @@
         translate: 140px -50%;
       }
     }
-    // li:nth-child(2) {
-    //   &::after {
-    //     @include decor-circle-big(true);
-    //     @include decor-position-bottom-right;
-
-    //     translate: 50% 40px;
-    //   }
-    // }
   }
   ul:not(:last-child) {
     li:nth-child(8n + 1) {
@@ -232,13 +205,5 @@
         translate: -50% 50;
       }
     }
-    // li:nth-child(2) {
-    //   &::after {
-    //     @include decor-circle-big(true);
-    //     @include decor-position-top-left;
-
-    //     translate: 50% 40px;
-    //   }
-    // }
   }
 }

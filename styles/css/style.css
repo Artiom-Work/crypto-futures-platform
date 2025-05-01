@@ -2039,20 +2039,4 @@ h4,
   bottom: 25px;
   right: 25px;
   translate: -50% 50;
-}
-
-.footer {
-  position: relative;
-  outline: 4px solid red;
-  min-height: 100px;
-}
-.footer::after {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  translate: -50% -50%;
-  content: "FOOTER";
-  font-size: 50px;
-  font-weight: 700;
-  color: red;
 }/*# sourceMappingURL=style.css.map */
