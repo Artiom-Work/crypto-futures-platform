@@ -124,12 +124,15 @@
   }
 
   &-image-value {
-    @include flex-center(true);
+    @include flex-center;
 
-    position: relative;
+    position: absolute;
+    z-index: 0;
+    left: 50%;
+    top: 50%;
     font-weight: 700;
     font-size: 12px;
-    padding: 10px 17px;
+    padding: 5px 10px;
     border-radius: var(--border-radius-small);
     background-color: var(--color-light);
 

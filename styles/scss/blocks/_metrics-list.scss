@@ -39,6 +39,8 @@
   &__value {
     @include flex-center(true);
 
+    position: relative;
+    z-index: 1;
     flex-shrink: 0;
     min-width: 55px;
     height: 30px;
@@ -52,9 +54,6 @@
     }
     @include mobile-s-media {
       min-width: 35px;
-    }
-    &::before {
-      content: attr(data-value) "%";
     }
   }
 }

@@ -761,6 +761,8 @@ h4,
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  position: relative;
+  z-index: 1;
   -ms-flex-negative: 0;
       flex-shrink: 0;
   min-width: 55px;
@@ -779,9 +781,6 @@ h4,
   .metrics-list__value {
     min-width: 35px;
   }
-}
-.metrics-list__value::before {
-  content: attr(data-value) "%";
 }
 
 .referral-system__text {
@@ -940,19 +939,22 @@ h4,
           mask: radial-gradient(circle at center, transparent calc(48% - 0.1px), #000 48% 70%, transparent calc(70% + 0.1px));
 }
 .who-uses__graph-image-value {
-  display: -webkit-inline-box;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  position: relative;
+  position: absolute;
+  z-index: 0;
+  left: 50%;
+  top: 50%;
   font-weight: 700;
   font-size: 12px;
-  padding: 10px 17px;
+  padding: 5px 10px;
   border-radius: var(--border-radius-small);
   background-color: var(--color-light);
 }
