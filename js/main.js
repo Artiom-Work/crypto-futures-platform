@@ -1,7 +1,9 @@
 'use strict';
 const sphereIcon = document.querySelector('dotlottie-player.menu__link-background');
+const investTablesSection = document.querySelector('.invest-indicators');
+const investTableBalanceRows = investTablesSection.querySelectorAll('.calc-table__row--cash-balance');
 
-// for sphere animation 
+// Code for styling sphere animation 
 function waitForShadowRoot(element, callback, interval = 100, timeout = 5000) {
 	const start = Date.now();
 	(function check() {
@@ -24,5 +26,20 @@ waitForShadowRoot(sphereIcon, (shadowRoot) => {
 	}
 });
 
+// Code for invest tables
+cellPainting(investTableBalanceRows);
+
+function cellPainting(rowsList) {
+	rowsList.forEach(row => {
+		const tds = row.querySelectorAll('td');
+		for (let i = 1; i < tds.length; i++) {
+			const cell = tds[i];
+			const value = parseFloat(cell.textContent.replace(/\s/g, '').replace(',', '.'));
+			if (!isNaN(value) && value < 0) {
+				cell.style.cssText = "color: var(--color-red); background-color: var(--color-pink);";
+			}
+		}
+	});
+}
 
 

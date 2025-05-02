@@ -99,6 +99,13 @@
     td {
       background: var(--color-light);
     }
+    &--small-text {
+      @include fluid-text(26, 12);
+
+      @include mobile-media {
+        margin-inline: calc(var(--container-padding-x) * -1);
+      }
+    }
 
     &--small {
       @include fluid-text(26, 16);

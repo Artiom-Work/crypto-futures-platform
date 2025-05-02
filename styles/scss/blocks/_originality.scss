@@ -1,6 +1,9 @@
 .originality {
   &__inner {
     padding-block: clamp(25px, 3.8vw, 75px) clamp(25px, 4vw, 82px);
+    @include mobile-media {
+      padding-inline: 10px;
+    }
   }
   &__table {
     max-width: 1455px;
