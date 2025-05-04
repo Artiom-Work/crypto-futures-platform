@@ -58,7 +58,6 @@ const GRAPH_CONFIG = {
 	labelOffset: 45
 };
 
-
 function initGraph() {
 	document.querySelectorAll('.who-uses__graph-image-value').forEach(el => el.remove());
 	document.querySelectorAll('.metrics-list__item').forEach(el => el.remove());
@@ -135,3 +134,38 @@ function calculateSegmentAngle(index) {
 }
 
 initGraph();
+
+// Code for translate page ( Google Translate Widget )
+
+const languages = {
+	ru: () => {
+		localStorage.setItem("language", "ru");
+		setLanguage('ru');
+	},
+	en: () => {
+		localStorage.setItem("language", "en");
+		setLanguage('en');
+	},
+	ar: () => {
+		localStorage.setItem("language", "en");
+		setLanguage('ar');
+	},
+	cn: () => {
+		localStorage.setItem("language", "en");
+		setLanguage('zh-CN');
+	}
+};
+
+window.addEventListener('load', () => {
+	const lang = localStorage.getItem('language') || 'ru';
+});
+
+function setLanguage(lang) {
+	document.cookie = "googtrans=/ru/" + lang;
+	window.location.reload();
+}
+
+document.getElementById('translate-to-english').addEventListener('click', languages.en);
+document.getElementById('translate-to-arabic').addEventListener('click', languages.ar);
+document.getElementById('translate-to-russian').addEventListener('click', languages.ru);
+document.getElementById('translate-to-chinese').addEventListener('click', languages.cn);

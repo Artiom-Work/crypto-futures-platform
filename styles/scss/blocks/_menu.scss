@@ -10,79 +10,66 @@
   &__list {
     @include flex-center;
 
-    column-gap: clamp(36px, 15vw, 360px);
+    column-gap: clamp(36px, 14vw, 360px);
     width: 100vw;
+    height: inherit;
 
     @include mobile-s-media {
-      column-gap: 13vw;
+      column-gap: 11vw;
     }
   }
 
   &__item {
     display: inline-flex;
-    flex-shrink: 0;
-
-    color: var(--color-gray-icon);
-    fill: currentColor;
-
-    &--ative {
-      color: var(--color-blue);
-
-      a {
-        position: relative;
-
-        &::before {
-          --circleWidth: clamp(4.6px, 0.52vw, 10px);
-          @include square(var(--circleWidth));
-
-          position: absolute;
-          content: "";
-
-          border-radius: 50%;
-          bottom: calc((var(--circleWidth) + 5px) * -1);
-          left: 50%;
-          translate: -50% 0;
-          background: currentColor;
-          z-index: 10;
-
-          @media (max-width: 1200px) {
-            bottom: 0;
-          }
-        }
-      }
-    }
   }
 
-  &__link {
+  &__link,
+  &__button {
     @include hover {
-      color: var(--color-blue);
+      color: var(--color-light);
       filter: brightness(80%);
     }
     @include active {
       scale: 0.92;
     }
-    &-icon {
-      transition-duration: var(--transition-duration);
-      width: clamp(22px, 2.29vw, 44px);
-      aspect-ratio: 1;
+  }
+
+  &__link {
+    @include flex-center(true);
+
+    position: relative;
+    top: -10px;
+    width: 71px;
+    aspect-ratio: 1;
+    border-radius: 50%;
+
+    &-background {
+      box-shadow: var(--box-shadow-3);
+      border-radius: 50%;
+      flex-shrink: 0;
+      width: clamp(44px, 9.25vw, 71px) !important;
+      height: clamp(44px, 9.25vw, 71px) !important;
+    }
+  }
+
+  &__button {
+    @include reset-button;
+
+    width: 44px;
+    height: 28px;
+    box-shadow: var(--box-shadow-3);
+
+    @include mobile-media {
+      width: 28px;
+      height: 19px;
     }
 
-    &--home {
-      @include flex-center(true);
+    &-icon {
+      transition-duration: var(--transition-duration);
 
-      position: relative;
-      top: -10px;
-      width: 71px;
-      aspect-ratio: 1;
-
-      border-radius: 50%;
-      box-shadow: var(--box-shadow);
-      @include hover {
-        color: var(--color-light);
-      }
       @include mobile-media {
-        width: clamp(44px, 9.25vw, 71px);
-        height: clamp(44px, 9.25vw, 71px);
+        width: 28px;
+        height: 28px;
       }
     }
   }

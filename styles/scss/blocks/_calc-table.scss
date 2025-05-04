@@ -151,7 +151,10 @@
 
     &--right {
       text-align: end;
-      font-style: italic;
+
+      td:first-child {
+        font-style: italic;
+      }
     }
     // Styles for row in forecast's tables
     &--color-green {
