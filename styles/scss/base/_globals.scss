@@ -2,7 +2,7 @@ body {
   display: flex;
   width: 100%;
   flex-direction: column;
-  position: static !important;
+  // position: static !important;
 
   font-family: var(--font-family-base);
   font-weight: 500;
@@ -11,9 +11,9 @@ body {
   background-color: var(--color-light);
   padding-block: 0 var(--menuHeight);
 }
-.skiptranslate {
-  display: none;
-}
+// .skiptranslate {
+//   display: none;
+// }
 .content {
   flex-grow: 1;
 }
