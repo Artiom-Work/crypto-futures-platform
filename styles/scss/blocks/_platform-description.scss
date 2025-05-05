@@ -4,7 +4,6 @@
   font-family: var(--font-family-alternate);
   font-weight: 400;
   line-height: 1.27;
-
   @include desktop-media {
     p {
       --paragraphMarginBottom: 25px;
