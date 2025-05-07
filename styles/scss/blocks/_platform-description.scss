@@ -21,6 +21,7 @@
       --paragraphMarginBottom: 15px;
     }
   }
+
   &__heading {
     position: relative;
     border-radius: var(--border-radius);
@@ -38,6 +39,7 @@
       justify-content: center;
     }
   }
+
   &__title {
     position: relative;
     z-index: 1;
@@ -51,9 +53,12 @@
 
     &--big {
       @include fluid-text(45, 26);
+
       max-width: clamp(300px, 62vw, 1200px);
     }
-
+    &--margin {
+      margin-block: 0;
+    }
     &--medium {
       max-width: 1200px;
       width: 100%;
@@ -102,6 +107,18 @@
       @include fluid-text(26, 12);
 
       @include mobile-media {
+        font-size: 12px;
+        margin-inline: calc(var(--container-padding-x) * -1);
+      }
+      @include mobile-s-media {
+        font-size: 11px;
+      }
+    }
+    &--medium-text {
+      @include fluid-text(26, 14);
+
+      @include mobile-media {
+        font-size: 13px;
         margin-inline: calc(var(--container-padding-x) * -1);
       }
     }

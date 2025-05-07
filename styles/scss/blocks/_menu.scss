@@ -4,18 +4,35 @@
   bottom: 0;
   left: 0;
   height: var(--menuHeight);
-  background-color: var(--color-light);
   box-shadow: var(--box-shadow-2);
+  background-color: var(--color-light-opacity);
 
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: var(--color-dark-opacity);
+    filter: blur(10px);
+    z-index: -1;
+  }
   &__list {
     @include flex-center;
 
     column-gap: clamp(36px, 14vw, 360px);
     width: 100vw;
     height: inherit;
+    @include mobile-media {
+      column-gap: 7vw;
 
-    @include mobile-s-media {
-      column-gap: 11vw;
+      & .menu__item:first-child {
+        margin-right: 8vw;
+      }
+      & .menu__item:last-child {
+        margin-left: 8vw;
+      }
     }
   }
 
@@ -27,18 +44,16 @@
   &__button {
     @include hover {
       color: var(--color-light);
-      filter: brightness(80%);
+      filter: brightness(120%);
     }
     @include active {
-      scale: 0.92;
+      scale: 1.1;
     }
   }
 
   &__link {
     @include flex-center(true);
 
-    position: relative;
-    top: -10px;
     width: 71px;
     aspect-ratio: 1;
     border-radius: 50%;
@@ -52,7 +67,6 @@
   }
 
   &__button {
-    // Переделать в ссылки и при active scale
     @include reset-button;
 
     width: 44px;
