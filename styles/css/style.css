@@ -2113,6 +2113,7 @@ h5,
 .block-text__subtitle--small::before {
   width: clamp(30px, 2.29vw, 44px);
   aspect-ratio: 1;
+  background: var(--color-grad-5);
 }
 .block-text__text {
   padding-inline: var(--indentSmall);
@@ -2151,6 +2152,19 @@ h5,
 @media (max-width: 480px) {
   .block-text__table {
     margin-inline: calc(var(--container-padding-x) * -1);
+  }
+}
+.block-text__table--small td {
+  vertical-align: middle;
+}
+@media (max-width: 767px) {
+  .block-text__table--small td {
+    font-size: 8px;
+  }
+}
+@media (max-width: 480px) {
+  .block-text__table--small td {
+    border: 0.5px solid var(--color-green-light);
   }
 }
 .block-text ul,

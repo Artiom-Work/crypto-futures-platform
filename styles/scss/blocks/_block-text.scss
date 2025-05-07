@@ -49,6 +49,8 @@
     &--small {
       &::before {
         @include square(clamp(30px, 2.29vw, 44px));
+
+        background: var(--color-grad-5);
       }
     }
   }
@@ -95,6 +97,18 @@
     }
     @include mobile-s-media {
       margin-inline: calc(var(--container-padding-x) * -1);
+    }
+
+    &--small {
+      td {
+        vertical-align: middle;
+        @include mobile-media {
+          font-size: 8px;
+        }
+        @include mobile-s-media {
+          border: 0.5px solid var(--color-green-light);
+        }
+      }
     }
   }
 
