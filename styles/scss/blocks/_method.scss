@@ -30,7 +30,8 @@
   }
 
   &__table-cell {
-    @include fluid-text(18, 16);
+    @include fluid-text(18, 10);
+
     padding-inline: 10px;
     padding-block: 10px;
     height: 140px;
@@ -40,11 +41,10 @@
       height: 100px;
     }
     @include tablet-media {
-      height: 80px;
+      height: 40px;
     }
     @include mobile-media {
       font-size: 10px;
-      height: 40px;
       padding-inline: 5px;
       padding-block: 5px;
     }

@@ -1,7 +1,6 @@
 .сommunication-methods {
-  background-color: var(--color-green-extra-light);
+  background: var(--color-grad-5);
   padding-block: 50px 0;
-  min-height: 900px;
 
   .container {
     @include mobile-s-media {
@@ -9,22 +8,17 @@
     }
   }
   @include tablet-media {
-    padding-block: clamp(20px, 3.9vw, 50px);
+    padding-block: clamp(20px, 3.9vw, 50px) 0;
   }
   @include mobile-media {
     padding-block: 20px 0;
   }
   @include mobile-s-media {
-    padding-block: 20px;
+    padding-block: 20px 0;
   }
 
   &__inner {
     position: relative;
-    min-height: 500px;
-    width: 100%;
-    background: var(--color-grad-1);
-    border-radius: var(--border-radius);
-    padding-block: 0 clamp(20px, 4.6vw, 90px);
 
     @include mobile-media {
       border-radius: var(--border-radius-table);
@@ -36,10 +30,13 @@
     z-index: 0;
     text-align: center;
     font-weight: 700;
+    white-space: nowrap;
     margin-block: 0 clamp(20px, 2.1vw, 40px);
     padding-block: clamp(20px, 2.1vw, 40px);
     width: 100%;
-    white-space: nowrap;
+
+    background: var(--color-grad-2);
+    border-radius: var(--border-radius);
 
     &::before,
     &::after {
@@ -66,11 +63,10 @@
 
   &__list {
     position: relative;
-    z-index: 1;
-    padding: 20px 50px;
 
     display: grid;
     grid-template-columns: repeat(3, 1fr);
+    align-items: center;
     column-gap: 20px;
     row-gap: 20px;
 
@@ -79,11 +75,13 @@
       row-gap: 50px;
     }
     @include tablet-media {
+      padding: 20px 0;
+      row-gap: 20px;
+    }
+    @include mobile-media {
       display: flex;
       flex-wrap: wrap;
       align-items: center;
-      padding: 20px 0;
-      row-gap: 20px;
     }
 
     &::before,
@@ -100,15 +98,21 @@
       translate: 50% 50%;
     }
     &::after {
-      @include decor-circle-color-big(true);
+      @include decor-circle-big(true);
 
       top: 0;
       left: 50%;
       translate: -150% -30%;
     }
   }
+
   &__item {
     position: relative;
+    z-index: 1;
+    background: var(--color-grad-2);
+    border-radius: var(--border-radius);
+    padding: 20px;
+
     @include desktop-media {
       margin-inline: auto;
       max-width: 700px;
@@ -119,19 +123,17 @@
     }
 
     @include tablet-media {
-      max-width: 450px;
+      max-width: 550px;
       width: 100%;
 
       &:nth-child(3n + 3) {
-        max-width: unset;
+        max-width: 950px;
       }
     }
 
     @media (max-width: 1024px) {
-      max-width: 700px;
-
       &:nth-child(3n + 3) {
-        max-width: 700px;
+        max-width: 550px;
       }
     }
     // for decor circles
@@ -175,12 +177,13 @@
 
   &__decor-image {
     position: absolute;
+    z-index: 1;
 
-    &--bottom {
-      bottom: 0;
-      right: 2%;
+    // &--bottom {
+    //   bottom: 0;
+    //   right: 2%;
 
-      rotate: 90deg;
-    }
+    //   rotate: 90deg;
+    // }
   }
 }
