@@ -14,7 +14,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 					nextElement.removeAttribute('style');
 					nextElement.style.opacity = '0';
-					nextElement.style.transform = 'translateY(-15vh)';
+					nextElement.style.transform = 'translateY(-10vh)';
 					nextElement.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
 
 					setTimeout(() => {

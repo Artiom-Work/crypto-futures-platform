@@ -29,7 +29,9 @@
 // styles for the last block with the platform description
 @import "./blocks/_platform-description.scss";
 @import "./blocks/_block-text.scss";
+@import "./blocks/_social-engineering-methods.scss";
+@import "./blocks/_method.scss";
 //==========
-// .lazy-load {
-//   display: block !important;
-// }
+.lazy-load {
+  display: block !important;
+}
