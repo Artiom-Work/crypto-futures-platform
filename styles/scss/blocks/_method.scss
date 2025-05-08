@@ -5,6 +5,7 @@
   &__name {
     @include fluid-text(24, 20);
 
+    position: relative;
     font-weight: 900;
     text-align: center;
     margin-block: 15px;
@@ -18,8 +19,6 @@
     border-radius: var(--border-radius-table);
     overflow: hidden;
     text-align: center;
-    &-head {
-    }
   }
 
   &__table-row {
@@ -32,6 +31,7 @@
   &__table-cell {
     @include fluid-text(18, 10);
 
+    font-weight: 400;
     padding-inline: 10px;
     padding-block: 10px;
     height: 140px;
@@ -66,6 +66,22 @@
     }
     &--first {
       color: var(--color-light);
+    }
+  }
+  &__decor-image {
+    position: absolute;
+    top: 0;
+    translate: 0 -50%;
+
+    &--rotate {
+      rotate: 90deg;
+      translate: 20% -30%;
+    }
+    &--right {
+      right: 0;
+    }
+    &--left {
+      left: 0;
     }
   }
 }

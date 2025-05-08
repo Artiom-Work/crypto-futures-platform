@@ -63,12 +63,14 @@
 
   &__list {
     position: relative;
+    z-index: 1;
 
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     align-items: center;
     column-gap: 20px;
     row-gap: 20px;
+    padding-block: clamp(20px, 2.1vw, 40px);
 
     @include desktop-media {
       grid-template-columns: repeat(2, 1fr);
@@ -93,9 +95,8 @@
     &::before {
       @include decor-circle-big;
 
-      bottom: 0.5%;
-      left: 50%;
-      translate: 50% 50%;
+      bottom: 5%;
+      left: 0;
     }
     &::after {
       @include decor-circle-big(true);
@@ -173,17 +174,5 @@
         translate: -200px -100px;
       }
     }
-  }
-
-  &__decor-image {
-    position: absolute;
-    z-index: 1;
-
-    // &--bottom {
-    //   bottom: 0;
-    //   right: 2%;
-
-    //   rotate: 90deg;
-    // }
   }
 }

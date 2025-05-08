@@ -59,6 +59,6 @@
   --transition-duration: 0.3s;
 
   @include mobile-media {
-    --menuHeight: clamp(60px, 13vw, 100px);
+    --menuHeight: clamp(80px, 13vw, 100px);
   }
 }

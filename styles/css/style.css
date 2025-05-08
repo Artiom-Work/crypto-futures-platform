@@ -255,7 +255,7 @@ svg * {
 }
 @media (max-width: 767px) {
   :root {
-    --menuHeight: clamp(60px, 13vw, 100px);
+    --menuHeight: clamp(80px, 13vw, 100px);
   }
 }
 
@@ -560,16 +560,6 @@ h5,
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
   display: inline-flex;
-}
-@media (hover: hover) {
-  .menu__link:hover, .menu__button:hover {
-    color: var(--color-light);
-  }
-}
-@media (hover: none) {
-  .menu__link:active, .menu__button:active {
-    color: var(--color-light);
-  }
 }
 .menu__link:active, .menu__button:active {
   scale: 1.1;
@@ -2440,6 +2430,7 @@ h5,
 }
 .сommunication-methods__list {
   position: relative;
+  z-index: 1;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   -webkit-box-align: center;
@@ -2449,6 +2440,7 @@ h5,
      -moz-column-gap: 20px;
           column-gap: 20px;
   row-gap: 20px;
+  padding-block: clamp(20px, 2.1vw, 40px);
 }
 @media (max-width: 1920px) {
   .сommunication-methods__list {
@@ -2487,9 +2479,8 @@ h5,
   border-radius: 50%;
   background: var(--color-grad-5);
   z-index: -1;
-  bottom: 0.5%;
-  left: 50%;
-  translate: 50% 50%;
+  bottom: 5%;
+  left: 0;
 }
 .сommunication-methods__list::after {
   width: clamp(100px, 13vw, 250px);
@@ -2604,10 +2595,6 @@ h5,
   translate: -50% -50%;
   translate: -200px -100px;
 }
-.сommunication-methods__decor-image {
-  position: absolute;
-  z-index: 1;
-}
 
 .method {
   font-family: var(--font-family-alternate);
@@ -2615,6 +2602,7 @@ h5,
 }
 .method__name {
   font-size: clamp(20px, 1.25vw, 24px);
+  position: relative;
   font-weight: 900;
   text-align: center;
   margin-block: 15px;
@@ -2634,6 +2622,7 @@ h5,
 }
 .method__table-cell {
   font-size: clamp(10px, 0.9375vw, 18px);
+  font-weight: 400;
   padding-inline: 10px;
   padding-block: 10px;
   height: 140px;
@@ -2676,4 +2665,19 @@ h5,
 }
 .method__table-cell--first {
   color: var(--color-light);
+}
+.method__decor-image {
+  position: absolute;
+  top: 0;
+  translate: 0 -50%;
+}
+.method__decor-image--rotate {
+  rotate: 90deg;
+  translate: 20% -30%;
+}
+.method__decor-image--right {
+  right: 0;
+}
+.method__decor-image--left {
+  left: 0;
 }/*# sourceMappingURL=style.css.map */

@@ -32,9 +32,6 @@
 
   &__link,
   &__button {
-    @include hover {
-      color: var(--color-light);
-    }
     @include active {
       scale: 1.1;
     }
