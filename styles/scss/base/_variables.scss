@@ -48,7 +48,7 @@
   --font-family-alternate: "Roboto", sans-serif;
 
   --container-width: 1880px;
-  --menuHeight: 80px;
+  --menuHeight: 100px;
   --container-padding-x: 20px;
   --whoUsesMagrinTopMobile: 250px;
 
@@ -59,6 +59,6 @@
   --transition-duration: 0.3s;
 
   @include mobile-media {
-    --menuHeight: clamp(50px, 10.43vw, 80px);
+    --menuHeight: clamp(60px, 13vw, 100px);
   }
 }

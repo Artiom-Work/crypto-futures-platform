@@ -33,17 +33,25 @@
     @include fluid-text(18, 16);
     padding-inline: 10px;
     padding-block: 10px;
-    height: 50px;
+    height: 140px;
     border: 1px solid var(--color-green-extra-light);
 
+    @include desktop-media {
+      height: 100px;
+    }
+    @include tablet-media {
+      height: 80px;
+    }
     @include mobile-media {
       font-size: 10px;
+      height: 40px;
       padding-inline: 5px;
       padding-block: 5px;
     }
     @include mobile-s-media {
-      padding-inline: 2px;
-      padding-block: 2px;
+      padding-inline: 3px;
+      padding-block: 3px;
+      height: 80px;
     }
     &--head,
     &--first {
