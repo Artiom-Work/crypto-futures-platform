@@ -6,7 +6,6 @@
   height: var(--menuHeight);
   box-shadow: var(--box-shadow-2);
   background-color: var(--color-light);
-  // background-color: var(--color-dark-opacity);
 
   &__list {
     @include flex-center;
@@ -41,18 +40,7 @@
     @include flex-center(true);
 
     width: clamp(44px, 8.25vw, 80px) !important;
-
     border-radius: 50%;
-
-    // &-background {
-    //   border-radius: 50%;
-    //   flex-shrink: 0;
-    //   height: clamp(44px, 9.25vw, 71px) !important;
-
-    //   @include mobile-media {
-    //     width: clamp(44px, 7.25vw, 60px) !important;
-    //     height: clamp(44px, 7.25vw, 60px) !important;
-    //   }
   }
 
   &__button {

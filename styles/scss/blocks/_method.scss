@@ -24,7 +24,6 @@
   &__table-row {
     &--head {
       border-radius: var(--border-radius);
-      background-color: var(--color-green-extra-light);
     }
   }
 
@@ -63,15 +62,17 @@
     }
     &--head {
       height: 30px;
+      background-color: var(--color-green-extra-light);
     }
     &--first {
-      color: var(--color-light);
+      @include fluid-text(18, 12);
     }
   }
   &__decor-image {
     position: absolute;
     top: 0;
     translate: 0 -50%;
+    width: clamp(40px, 2.6vw, 50px);
 
     &--rotate {
       rotate: 90deg;
@@ -82,6 +83,12 @@
     }
     &--left {
       left: 0;
+    }
+    &--bottom {
+      top: 50%;
+    }
+    &--top {
+      top: -50%;
     }
   }
 }
