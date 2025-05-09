@@ -2,6 +2,9 @@
 const sphereIcon = document.querySelector('dotlottie-player.menu__link-background');
 const investTablesSection = document.querySelector('.invest-indicators');
 const investTableBalanceRows = investTablesSection.querySelectorAll('.calc-table__row--cash-balance');
+const preloader = document.querySelector('.preloader');
+const contentWrapper = document.querySelector('.body__container');
+let mutationObserver;
 
 // Code for invest tables
 cellPainting(investTableBalanceRows);
@@ -135,17 +138,57 @@ const languages = {
 
 window.addEventListener('load', () => {
 	const lang = localStorage.getItem('language') || 'en';
+	showPreloader();
 	if (!localStorage.getItem('language')) {
 		document.getElementById('translate-to-english').click();
+	} else {
+		setTimeout(() => {
+			hidePreloader();
+		}, 3000);
 	}
 });
 
 function setLanguage(lang) {
-	document.cookie = "googtrans=/ru/" + lang;
-	window.location.reload();
+	console.log(contentWrapper);
+	contentWrapper.classList.add('fade-out');
+
+	setTimeout(() => {
+		showPreloader();
+		document.cookie = "googtrans=/ru/" + lang;
+		window.location.reload();
+	}, 400);
 }
 
 document.getElementById('translate-to-english').addEventListener('click', languages.en);
 document.getElementById('translate-to-arabic').addEventListener('click', languages.ar);
 document.getElementById('translate-to-russian').addEventListener('click', languages.ru);
 document.getElementById('translate-to-chinese').addEventListener('click', languages.cn);
+
+// For plreloader and load page
+function showPreloader() {
+	preloader.classList.remove('visually-hidden');
+
+	if (!contentWrapper.classList.contains('visually-hidden')) {
+		contentWrapper.classList.add('visually-hidden');
+	}
+	if (mutationObserver) {
+		mutationObserver.disconnect();
+	}
+
+	mutationObserver = new MutationObserver(() => {
+		hidePreloader();
+		mutationObserver.disconnect();
+	});
+
+	mutationObserver.observe(contentWrapper, { childList: true, subtree: true, characterData: true });
+}
+
+function hidePreloader() {
+	preloader.classList.add('fade-out');
+
+	setTimeout(() => {
+		preloader.classList.add('visually-hidden');
+		contentWrapper.classList.remove('visually-hidden');
+	}, 400);
+}
+

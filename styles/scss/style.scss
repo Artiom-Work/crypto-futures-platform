@@ -7,6 +7,7 @@
 @import "./base/_utils.scss";
 @import "./base/_globals.scss";
 //blocks
+@import "./blocks/_preloader.scss";
 @import "./blocks/_logo.scss";
 @import "./blocks/_header.scss";
 @import "./blocks/_menu.scss";
@@ -32,6 +33,6 @@
 @import "./blocks/_сommunication-methods.scss";
 @import "./blocks/_method.scss";
 //==========
-.lazy-load {
-  display: block !important;
-}
+// .lazy-load {
+//   display: block !important;
+// }

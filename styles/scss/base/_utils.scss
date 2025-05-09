@@ -4,7 +4,10 @@
   margin-inline: auto;
   padding-inline: var(--container-padding-x);
 }
-
+.fade-out {
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
 .visually-hidden {
   @include visually-hidden;
 }

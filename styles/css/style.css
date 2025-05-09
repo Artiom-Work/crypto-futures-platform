@@ -266,6 +266,12 @@ svg * {
   padding-inline: var(--container-padding-x);
 }
 
+.fade-out {
+  opacity: 0;
+  -webkit-transition: opacity 0.4s ease;
+  transition: opacity 0.4s ease;
+}
+
 .visually-hidden {
   position: absolute !important;
   width: 1px !important;
@@ -308,6 +314,14 @@ body {
   color: var(--color-dark);
   background-color: var(--color-light);
   padding-block: 0 var(--menuHeight);
+}
+
+.body__container {
+  -webkit-transition: opacity 0.6s ease;
+  transition: opacity 0.6s ease;
+}
+.body__container.visually-hidden {
+  opacity: 0;
 }
 
 .skiptranslate,
@@ -433,6 +447,21 @@ h5,
   border-radius: 50%;
 }
 
+.preloader {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  z-index: 10;
+}
+.preloader__wrapper {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  translate: -50% -50%;
+  width: clamp(150px, 20.8vw, 400px) !important;
+  height: clamp(150px, 20.8vw, 400px) !important;
+}
+
 .logo {
   max-width: 932px;
   max-width: clamp(320px, 48.5vw, 932px);
@@ -519,7 +548,7 @@ h5,
 
 .menu {
   position: fixed;
-  z-index: 3;
+  z-index: 20;
   bottom: 0;
   left: 0;
   height: var(--menuHeight);
@@ -2692,8 +2721,4 @@ h5,
 }
 .method__decor-image--top {
   top: -50%;
-}
-
-.lazy-load {
-  display: block !important;
 }/*# sourceMappingURL=style.css.map */

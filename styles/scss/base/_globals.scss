@@ -11,7 +11,13 @@ body {
   background-color: var(--color-light);
   padding-block: 0 var(--menuHeight);
 }
+.body__container {
+  transition: opacity 0.6s ease;
 
+  &.visually-hidden {
+    opacity: 0;
+  }
+}
 .skiptranslate,
 .VIpgJd-ZVi9od-aZ2wEe-wOHMyf {
   display: none !important;
