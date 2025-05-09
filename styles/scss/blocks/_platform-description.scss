@@ -74,7 +74,7 @@
   &__main-desc {
     position: relative;
     z-index: 1;
-    @include fluid-text(30, 24);
+    @include fluid-text(30, 20);
 
     &--small {
       @include fluid-text(26, 18);
@@ -111,7 +111,7 @@
         margin-inline: calc(var(--container-padding-x) * -1);
       }
       @include mobile-s-media {
-        font-size: 11px;
+        font-size: 10px;
       }
     }
     &--medium-text {
