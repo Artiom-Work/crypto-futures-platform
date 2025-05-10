@@ -43,10 +43,6 @@
     }
   }
 
-  &__decor-background {
-    height: clamp(25px, 2.81vw, 54px);
-  }
-  //--------//
   &__form {
     --formButtonWidth: 100px;
     --formHeight: 55px;
@@ -66,6 +62,7 @@
       max-width: 280px;
     }
   }
+
   &__input {
     border-radius: inherit;
     width: 100%;
@@ -102,5 +99,9 @@
     @include active {
       transform: scale(1.05);
     }
+  }
+
+  &__decor-background {
+    height: clamp(25px, 2.81vw, 54px);
   }
 }

@@ -1477,9 +1477,6 @@ h5,
     font-size: 16px;
   }
 }
-.originality__decor-background {
-  height: clamp(25px, 2.81vw, 54px);
-}
 .originality__form {
   --formButtonWidth: 100px;
   --formHeight: 55px;
@@ -1546,6 +1543,9 @@ h5,
   -webkit-transform: scale(1.05);
           transform: scale(1.05);
 }
+.originality__decor-background {
+  height: clamp(25px, 2.81vw, 54px);
+}
 
 .numbers__inner {
   max-width: 1920px;
@@ -1578,6 +1578,46 @@ h5,
 @media (max-width: 767px) {
   .numbers__inner {
     padding-block: 25px 40px;
+  }
+}
+.numbers__title {
+  font-size: clamp(60px, 5vw, 96px);
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-inline: clamp(30px, 5.92vw, 131px);
+  min-height: clamp(60px, 13.7vw, 253px);
+  font-family: var(--font-family-second);
+  font-weight: 700;
+  border-radius: var(--border-radius-large);
+  background: var(--color-grad-1);
+  margin-block: 81px 0;
+  letter-spacing: -0.03em;
+}
+@media (max-width: 1280px) {
+  .numbers__title {
+    grid-area: heading;
+    max-width: 650px;
+    width: 100%;
+    margin-inline: auto;
+    margin-block: unset;
+  }
+}
+@media (max-width: 767px) {
+  .numbers__title {
+    font-size: 40px;
+    max-width: clamp(279px, 59vw, 450px);
+  }
+}
+@media (max-width: 480px) {
+  .numbers__title {
+    font-size: 35px;
   }
 }
 .numbers__top-tables-group {
@@ -1729,48 +1769,6 @@ h5,
     font-size: clamp(20px, 2.34vw, 30px);
   }
 }
-
-.numbers__title {
-  font-size: clamp(60px, 5vw, 96px);
-  display: -webkit-inline-box;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  padding-inline: clamp(30px, 5.92vw, 131px);
-  min-height: clamp(60px, 13.7vw, 253px);
-  font-family: var(--font-family-second);
-  font-weight: 700;
-  border-radius: var(--border-radius-large);
-  background: var(--color-grad-1);
-  margin-block: 81px 0;
-  letter-spacing: -0.03em;
-}
-@media (max-width: 1280px) {
-  .numbers__title {
-    grid-area: heading;
-    max-width: 650px;
-    width: 100%;
-    margin-inline: auto;
-    margin-block: unset;
-  }
-}
-@media (max-width: 767px) {
-  .numbers__title {
-    font-size: 40px;
-    max-width: clamp(279px, 59vw, 450px);
-  }
-}
-@media (max-width: 480px) {
-  .numbers__title {
-    font-size: 35px;
-  }
-}
-
 .numbers__decor-background {
   height: clamp(40px, 9.76vw, 125px);
 }
@@ -2448,7 +2446,7 @@ h5,
   z-index: -1;
   bottom: 25px;
   right: 25px;
-  translate: -50% 50;
+  translate: -50% 50%;
 }
 
 .сommunication-methods {
