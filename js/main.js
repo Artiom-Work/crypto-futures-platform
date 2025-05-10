@@ -136,7 +136,7 @@ window.addEventListener('load', () => {
 });
 
 function setLanguage(lang) {
-	contentWrapper.classList.add('fade-out');
+	contentWrapper.classList.add('hide-content');
 
 	setTimeout(() => {
 		showPreloader();
@@ -154,8 +154,8 @@ document.getElementById('translate-to-chinese').addEventListener('click', langua
 function showPreloader() {
 	preloader.classList.remove('visually-hidden');
 
-	if (!contentWrapper.classList.contains('visually-hidden')) {
-		contentWrapper.classList.add('visually-hidden');
+	if (!contentWrapper.classList.contains('hide-content')) {
+		contentWrapper.classList.add('hide-content');
 	}
 	if (mutationObserver) {
 		mutationObserver.disconnect();
@@ -174,7 +174,7 @@ function hidePreloader() {
 
 	setTimeout(() => {
 		preloader.classList.add('visually-hidden');
-		contentWrapper.classList.remove('visually-hidden');
+		contentWrapper.classList.remove('hide-content');
 	}, 400);
 }
 

@@ -268,8 +268,14 @@ svg * {
 
 .fade-out {
   opacity: 0;
-  -webkit-transition: opacity 0.4s ease;
-  transition: opacity 0.4s ease;
+  -webkit-transition: opacity 0.4s ease-out;
+  transition: opacity 0.4s ease-out;
+}
+
+.hide-content {
+  opacity: 0;
+  -webkit-transition-duration: opacity 0.5s;
+          transition-duration: opacity 0.5s;
 }
 
 .visually-hidden {
