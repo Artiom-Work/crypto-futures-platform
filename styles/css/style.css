@@ -1442,6 +1442,7 @@ h5,
   max-width: 1455px;
   width: 100%;
   margin-inline: auto;
+  margin-block: 0 clamp(20px, 2.6vw, 50px);
 }
 @media (max-width: 1000px) {
   .originality__table td,
@@ -1472,6 +1473,72 @@ h5,
 }
 .originality__decor-background {
   height: clamp(25px, 2.81vw, 54px);
+}
+.originality__form {
+  --formButtonWidth: 100px;
+  --formHeight: 55px;
+  -webkit-box-shadow: var(--box-shadow-2);
+          box-shadow: var(--box-shadow-2);
+  font-family: var(--font-family-second);
+  position: relative;
+  max-width: 320px;
+  min-height: var(--formHeight);
+  margin-inline: auto;
+  border-radius: var(--border-radius-large);
+}
+@media (max-width: 480px) {
+  .originality__form {
+    --formHeight: 44px;
+    --formButtonWidth: 90px;
+    max-width: 280px;
+  }
+}
+.originality__input {
+  border-radius: inherit;
+  width: 100%;
+  outline: transparent;
+  border: transparent;
+  height: var(--formHeight);
+  padding: 10px calc(var(--formButtonWidth) + 20px) 10px 20px;
+}
+.originality__input:focus {
+  background-color: var(--color-green-extra-light);
+}
+@media (hover: hover) {
+  .originality__input:hover {
+    background-color: var(--color-green-extra-light);
+  }
+}
+@media (hover: none) {
+  .originality__input:active {
+    background-color: var(--color-green-extra-light);
+  }
+}
+.originality__button {
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: var(--formButtonWidth);
+  height: 100%;
+  border: none;
+  border-radius: 0 var(--border-radius-large) var(--border-radius-large) 0;
+  background: var(--color-grad-1);
+  font-weight: 900;
+  color: var(--color-light);
+}
+@media (hover: hover) {
+  .originality__button:hover {
+    color: var(--color-dark);
+  }
+}
+@media (hover: none) {
+  .originality__button:active {
+    color: var(--color-dark);
+  }
+}
+.originality__button:active {
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
 }
 
 .numbers__inner {

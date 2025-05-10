@@ -6,6 +6,7 @@
       --container-padding-x: 5px;
     }
   }
+
   @include tablet-media {
     padding-block: clamp(20px, 3.9vw, 50px) 0;
   }

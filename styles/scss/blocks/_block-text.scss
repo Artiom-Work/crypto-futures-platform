@@ -8,6 +8,7 @@
   &--padding-block {
     padding-block: 0;
   }
+
   &__title {
     display: inline-flex;
     font-weight: 700;
@@ -46,6 +47,7 @@
       border-radius: 50%;
       left: 0;
     }
+
     &--small {
       &::before {
         @include square(clamp(30px, 2.29vw, 44px));
