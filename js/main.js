@@ -1052,7 +1052,7 @@ function addTablesToHtml() {
 
 							<tr class="calc-table__row calc-table__row--yellow-title calc-table__row--right">
 								<td>
-									Социальная инженерия
+									Социальная активность
 								</td>
 								<td>15 000</td>
 								<td>15 000</td>
@@ -1191,7 +1191,7 @@ function addTablesToHtml() {
 
 							<tr class="calc-table__row calc-table__row--yellow-title calc-table__row--right">
 								<td>
-									Социальная инженерия
+									Социальная активность
 								</td>
 								<td>1 572</td>
 								<td>5 637</td>
@@ -1330,7 +1330,7 @@ function addTablesToHtml() {
 
 							<tr class="calc-table__row calc-table__row--yellow-title calc-table__row--right">
 								<td>
-									Социальная инженерия
+									Социальная активность
 								</td>
 								<td>28 000</td>
 								<td>44 274</td>
@@ -1469,7 +1469,7 @@ function addTablesToHtml() {
 
 							<tr class="calc-table__row calc-table__row--yellow-title calc-table__row--right">
 								<td>
-									Социальная инженерия
+									Социальная активность
 								</td>
 								<td>135 601</td>
 								<td>190 681</td>
