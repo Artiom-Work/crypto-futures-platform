@@ -152,10 +152,12 @@ document.getElementById('translate-to-chinese').addEventListener('click', langua
 
 // Code for plreloader and load page
 function showPreloader() {
-	preloader.classList.remove('visually-hidden');
+	preloader.classList.remove('hide-content');
+	preloader.classList.add('show-content');
 
-	if (!contentWrapper.classList.contains('hide-content')) {
-		contentWrapper.classList.add('hide-content');
+
+	if (!contentWrapper.classList.contains('visually-hidden')) {
+		contentWrapper.classList.add('visually-hidden');
 	}
 	if (mutationObserver) {
 		mutationObserver.disconnect();
@@ -170,11 +172,13 @@ function showPreloader() {
 }
 
 function hidePreloader() {
-	preloader.classList.add('fade-out');
+	preloader.classList.add('hide-content');
 
 	setTimeout(() => {
 		preloader.classList.add('visually-hidden');
+		contentWrapper.classList.remove('visually-hidden');
 		contentWrapper.classList.remove('hide-content');
+		contentWrapper.classList.add('show-content');
 	}, 400);
 }
 
@@ -229,7 +233,7 @@ function addTablesToHtml() {
 
 	if (startPointDriving && investTablesSection === null) {
 		const tableSections = `
-						<section class="numbers section">
+						<section class="numbers section hide-content">
 				<h2 class="visually-hidden">Цифры Mini-app Q</h2>
 
 				<div class="numbers__inner">
@@ -334,7 +338,7 @@ function addTablesToHtml() {
 				<div class="numbers__decor-background section__decor-background "></div>
 			</section>
 
-						<section class="forecast forecast--three-month section">
+						<section class="forecast forecast--three-month section hide-content">
 				<h2 class="visually-hidden">Прогноз роста выручки Mini-app Q за 1-3 месяца</h2>
 
 				<div class="forecast__inner container">
@@ -499,7 +503,7 @@ function addTablesToHtml() {
 				<div class="forecast__decor-background section__decor-background "></div>
 			</section>
 
-						<section class="forecast forecast--six-month section">
+						<section class="forecast forecast--six-month section hide-content">
 				<h2 class="visually-hidden">Прогноз роста выручки Mini-app Q за 4-6 месяца</h2>
 
 				<div class="forecast__inner container">
@@ -666,7 +670,7 @@ function addTablesToHtml() {
 				<div class="forecast__decor-background section__decor-background "></div>
 			</section>
 
-						<section class="forecast forecast--nine-month section">
+						<section class="forecast forecast--nine-month section hide-content">
 				<h2 class="visually-hidden">Прогноз роста выручки Mini-app Q за 7-9 месяцев</h2>
 
 				<div class="forecast__inner container">
@@ -829,7 +833,7 @@ function addTablesToHtml() {
 				<div class="forecast__decor-background section__decor-background "></div>
 			</section>
 
-						<section class="forecast forecast--twelve-month section">
+						<section class="forecast forecast--twelve-month section hide-content">
 				<h2 class="visually-hidden">Прогноз роста выручки Mini-app Q за 10-12 месяцев</h2>
 
 				<div class="forecast__inner container">
@@ -984,7 +988,7 @@ function addTablesToHtml() {
 				<div class="forecast__decor-background forecast__decor-background--long section__decor-background "></div>
 			</section>
 
-						<section class="invest-indicators section">
+						<section class="invest-indicators section hide-content">
 				<h2 class="visually-hidden">Инвестиционные показатели Mini-app Q</h2>
 
 				<div class="invest-indicators__inner container">
@@ -1555,6 +1559,14 @@ function addTablesToHtml() {
 		const investTableBalanceRows = investTablesSection.querySelectorAll('.calc-table__row--cash-balance');
 
 		cellPainting(investTableBalanceRows);
+		const hideSections = document.querySelectorAll('section.hide-content');
+		hideSections.forEach(section => {
+			setTimeout(() => {
+				section.classList.remove('hide-content');
+				section.classList.add('show-content');
+			}, 400);
+
+		});
 	} else {
 		console.log('There is already a table instance on the page...');
 	}
