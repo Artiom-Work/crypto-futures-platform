@@ -132,13 +132,6 @@ svg * {
   font-display: swap;
 }
 @font-face {
-  font-family: "Futura book medium";
-  src: url("../../fonts/futura-book-medium.woff2") format("woff2");
-  font-weight: 500;
-  font-style: normal;
-  font-display: swap;
-}
-@font-face {
   font-family: "Futura book light";
   src: url("../../fonts/futura-book-light.woff2") format("woff2");
   font-weight: 500;
@@ -469,7 +462,6 @@ h5,
 }
 
 .logo {
-  max-width: 932px;
   max-width: clamp(320px, 48.5vw, 932px);
   width: 100%;
   background: var(--color-grad-1);
