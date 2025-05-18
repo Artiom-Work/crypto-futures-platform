@@ -5,9 +5,41 @@ const preloader = document.querySelector('.preloader');
 const contentWrapper = document.querySelector('.body__container');
 const creatingTablesForm = document.getElementById('create-tables-form');
 const creatingTablesFormInput = document.getElementById('create-tables-password');
+const overlay = document.querySelector('.viewport-overlay');
+
 
 const passwordToSeeNumbers = 12345678;
 let mutationObserver;
+let scrollTimeout;
+let lastScrollTop = 0;
+
+// Code for faid animation  when skrolling
+window.addEventListener('scroll', () => {
+	const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+	const direction = scrollTop > lastScrollTop ? 'down' : (scrollTop < lastScrollTop ? 'up' : null);
+
+	if (direction === 'down') {
+		overlay.classList.remove('fade-in-top', 'fade-out', 'fade-out-top');
+		overlay.classList.add('fade-in');
+	} else if (direction === 'up') {
+		overlay.classList.remove('fade-in', 'fade-out', 'fade-out-top');
+		overlay.classList.add('fade-in-top');
+	}
+
+	lastScrollTop = scrollTop <= 0 ? 0 : scrollTop;
+
+	clearTimeout(scrollTimeout);
+
+	scrollTimeout = setTimeout(() => {
+		overlay.classList.remove('fade-in', 'fade-in-top');
+
+		if (direction === 'down') {
+			overlay.classList.add('fade-out');
+		} else if (direction === 'up') {
+			overlay.classList.add('fade-out-top');
+		}
+	}, 450);
+});
 
 // Code for graph in the block who-uses
 
@@ -127,11 +159,8 @@ window.addEventListener('load', () => {
 	const lang = localStorage.getItem('language') || 'en';
 	showPreloader();
 	if (!localStorage.getItem('language')) {
-		document.getElementById('translate-to-english').click();
-	} else {
-		setTimeout(() => {
-			hidePreloader();
-		}, 3000);
+		localStorage.setItem("language", "en");
+		setLanguage('en');
 	}
 });
 
@@ -151,6 +180,7 @@ document.getElementById('translate-to-russian').addEventListener('click', langua
 document.getElementById('translate-to-chinese').addEventListener('click', languages.cn);
 
 // Code for plreloader and load page
+
 function showPreloader() {
 	preloader.classList.remove('hide-content');
 	preloader.classList.add('show-content');
@@ -163,6 +193,9 @@ function showPreloader() {
 		mutationObserver.disconnect();
 	}
 
+	if (localStorage.getItem("language", "ru")) {
+		hidePreloader();
+	}
 	mutationObserver = new MutationObserver(() => {
 		hidePreloader();
 		mutationObserver.disconnect();
@@ -179,9 +212,8 @@ function hidePreloader() {
 		contentWrapper.classList.remove('visually-hidden');
 		contentWrapper.classList.remove('hide-content');
 		contentWrapper.classList.add('show-content');
-	}, 400);
+	}, 1000);
 }
-
 // Code for creating secret tables ( form in block originality )
 creatingTablesForm.addEventListener('submit', (e) => {
 	e.preventDefault();

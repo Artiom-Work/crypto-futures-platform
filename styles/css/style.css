@@ -225,6 +225,16 @@ svg * {
     rgba(255, 255, 255, 0.525) 100%
   );
   --color-grad-5: linear-gradient(226deg, #fff 0%, #a3e9c3 100%);
+  --overlay-color: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.45) 20%,
+    rgb(255, 255, 255)
+  );
+  --overlay-color-reverse: linear-gradient(
+    0deg,
+    rgba(255, 255, 255, 0.45) 20%,
+    rgb(255, 255, 255)
+  );
   --border-radius-small: 5px;
   --border-radius-table: 10px;
   --border-radius: 30px;
@@ -444,6 +454,103 @@ h5,
           align-items: center;
   background: var(--color-grad-2);
   border-radius: 50%;
+}
+
+@-webkit-keyframes fadeIn {
+  from {
+    -webkit-backdrop-filter: blur(0px);
+            backdrop-filter: blur(0px);
+    opacity: 0;
+    visibility: visible;
+  }
+  to {
+    -webkit-backdrop-filter: blur(6px);
+            backdrop-filter: blur(6px);
+    opacity: 1;
+    visibility: visible;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    -webkit-backdrop-filter: blur(0px);
+            backdrop-filter: blur(0px);
+    opacity: 0;
+    visibility: visible;
+  }
+  to {
+    -webkit-backdrop-filter: blur(6px);
+            backdrop-filter: blur(6px);
+    opacity: 1;
+    visibility: visible;
+  }
+}
+@-webkit-keyframes fadeOut {
+  from {
+    -webkit-backdrop-filter: blur(6px);
+            backdrop-filter: blur(6px);
+    opacity: 1;
+    visibility: visible;
+  }
+  to {
+    -webkit-backdrop-filter: blur(0px);
+            backdrop-filter: blur(0px);
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+@keyframes fadeOut {
+  from {
+    -webkit-backdrop-filter: blur(6px);
+            backdrop-filter: blur(6px);
+    opacity: 1;
+    visibility: visible;
+  }
+  to {
+    -webkit-backdrop-filter: blur(0px);
+            backdrop-filter: blur(0px);
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+.viewport-overlay {
+  position: fixed;
+  bottom: var(--menuHeight);
+  width: 100vw;
+  height: calc(100vh - var(--menuHeight));
+  pointer-events: none;
+  visibility: hidden;
+  z-index: 9999;
+}
+.viewport-overlay.fade-in {
+  visibility: visible;
+  -webkit-animation: fadeIn 0.4s forwards;
+          animation: fadeIn 0.4s forwards;
+}
+.viewport-overlay.fade-in-top {
+  visibility: visible;
+  -webkit-animation: fadeIn 0.4s forwards;
+          animation: fadeIn 0.4s forwards;
+}
+.viewport-overlay.fade-out {
+  -webkit-animation: fadeOut 0.6s forwards;
+          animation: fadeOut 0.6s forwards;
+  visibility: hidden;
+}
+.viewport-overlay.fade-out-top {
+  -webkit-animation: fadeOut 0.6s forwards;
+          animation: fadeOut 0.6s forwards;
+  visibility: hidden;
+}
+
+.fade-in,
+.fade-out {
+  background: var(--overlay-color);
+}
+
+.fade-in-top,
+.fade-out-top {
+  background: var(--overlay-color-reverse);
 }
 
 .preloader {

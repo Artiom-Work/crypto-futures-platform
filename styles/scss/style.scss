@@ -6,7 +6,9 @@
 @import "./base/_variables.scss";
 @import "./base/_utils.scss";
 @import "./base/_globals.scss";
+@import "./base/_animation.scss";
 //blocks
+@import "./blocks/_viewport-overlay.scss";
 @import "./blocks/_preloader.scss";
 @import "./blocks/_logo.scss";
 @import "./blocks/_header.scss";

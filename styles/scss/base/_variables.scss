@@ -29,6 +29,16 @@
     rgba(255, 255, 255, 0.525) 100%
   );
   --color-grad-5: linear-gradient(226deg, #fff 0%, #a3e9c3 100%);
+  --overlay-color: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.45) 20%,
+    rgb(255, 255, 255)
+  );
+  --overlay-color-reverse: linear-gradient(
+    0deg,
+    rgba(255, 255, 255, 0.45) 20%,
+    rgb(255, 255, 255)
+  );
 
   --border-radius-small: 5px;
   --border-radius-table: 10px;
